@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affrina A | Data Science Portfolio</title>
-    <meta name="description" content="Portfolio of Affrina A - 2nd Year B.Sc. Data Science Student at Kumaraguru Institutions. Skilled in Python, SQL, Power BI, and Machine Learning.">
+    <title>Affrina A | Data Science & Innovation Portfolio</title>
+    <meta name="description" content="Portfolio of Affrina A - 2nd Year B.Sc. Data Science Student at Kumaraguru Institutions & Innovation Engineer Trainee at PRICE ProtoSem. Skilled in Python, SQL, Power BI, and Machine Learning.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -60,6 +60,29 @@
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
                               linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
         }
+        /* Custom Week Card Hover Effects */
+        .week-card {
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .week-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(249, 115, 22, 0.5);
+            background: rgba(30, 41, 59, 0.85);
+            box-shadow: 0 12px 25px -8px rgba(249, 115, 22, 0.2);
+        }
+        .week-card:hover .week-arrow {
+            transform: translateX(4px);
+            color: #fb923c;
+        }
+        .week-card:hover .week-number {
+            color: #fed7aa;
+        }
+        .phase-tab.active {
+            background: linear-gradient(135deg, #ea580c, #f97316);
+            color: #ffffff;
+            border-color: #fb923c;
+            box-shadow: 0 4px 15px -3px rgba(249, 115, 22, 0.4);
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white relative overflow-x-hidden min-h-screen">
@@ -78,14 +101,18 @@
                 </div>
                 <div>
                     <span class="font-bold text-slate-100 tracking-tight block group-hover:text-brand-400 transition-colors">Affrina A</span>
-                    <span class="text-xs text-slate-400 font-mono block">Data Science</span>
+                    <span class="text-xs text-slate-400 font-mono block">Data Science & Innovation</span>
                 </div>
             </a>
             
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+            <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-slate-300">
                 <a href="#about" class="hover:text-brand-400 transition-colors">About</a>
+                <a href="#protosem" class="hover:text-brand-400 transition-colors flex items-center gap-1.5">
+                    <span>ProtoSem</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                </a>
                 <a href="#skills" class="hover:text-brand-400 transition-colors">Skills</a>
-                <a href="#focus" class="hover:text-brand-400 transition-colors">Current Focus</a>
+                <a href="#focus" class="hover:text-brand-400 transition-colors">Projects</a>
                 <a href="#education" class="hover:text-brand-400 transition-colors">Education</a>
             </nav>
 
@@ -124,18 +151,18 @@
 
                 <!-- Bio Description -->
                 <p class="text-slate-300 text-base md:text-lg max-w-2xl leading-relaxed">
-                    Hello! I'm <strong class="text-white font-semibold">Affrina A</strong>, an aspiring Data Scientist passionate about uncovering patterns, training machine learning models, and transforming complex information into intuitive dashboards.
+                    Hello! I'm <strong class="text-white font-semibold">Affrina A</strong>, an aspiring Data Scientist and Innovation Engineer Trainee passionate about uncovering patterns, training machine learning models, and building practical technology solutions.
                 </p>
 
                 <!-- Call to Action Buttons -->
                 <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
-                    <a href="resume.html" target="_blank" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-500 to-rose-500 hover:from-brand-600 hover:to-rose-600 text-white font-bold text-sm shadow-lg shadow-brand-500/25 transition-all flex items-center gap-2">
-                        <i class="ph ph-file-pdf text-lg"></i>
-                        View ATS Resume
+                    <a href="#protosem" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-500 to-rose-500 hover:from-brand-600 hover:to-rose-600 text-white font-bold text-sm shadow-lg shadow-brand-500/25 transition-all flex items-center gap-2">
+                        <i class="ph ph-sparkle text-lg"></i>
+                        Explore ProtoSem Journey
                     </a>
-                    <a href="mailto:affrina700@gmail.com" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-slate-500 font-semibold text-sm transition-all flex items-center gap-2">
-                        <i class="ph ph-envelope-simple text-lg text-brand-400"></i>
-                        affrina700@gmail.com
+                    <a href="resume.html" target="_blank" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-slate-500 font-semibold text-sm transition-all flex items-center gap-2">
+                        <i class="ph ph-file-pdf text-lg text-brand-400"></i>
+                        ATS Resume
                     </a>
                     <a href="https://github.com/affrina700-eng" target="_blank" class="p-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500 transition-all flex items-center justify-center" title="GitHub Profile">
                         <i class="ph ph-github-logo text-xl"></i>
@@ -151,13 +178,13 @@
                              alt="Affrina A Profile" 
                              class="w-32 h-32 rounded-2xl shadow-md border-2 border-brand-500/40 mb-3 object-cover">
                         <span class="text-sm font-bold text-slate-200">Affrina A</span>
-                        <span class="text-xs text-brand-400 font-mono">Data Science Scholar</span>
+                        <span class="text-xs text-brand-400 font-mono">Data Science & Innovation</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- BENTO GRID LAYOUT -->
+        <!-- BENTO GRID: OVERVIEW & HIGHLIGHTS -->
         <section id="about" class="space-y-6">
             <div class="flex items-center justify-between">
                 <div>
@@ -191,7 +218,7 @@
                         <span class="text-xs font-mono text-slate-400">Current Focus:</span>
                         <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Predictive ML</span>
                         <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Power BI Dashboards</span>
-                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Advanced SQL</span>
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">ProtoSem Innovation</span>
                     </div>
                 </div>
 
@@ -221,175 +248,388 @@
                     </div>
                 </div>
 
-                <!-- Bento Tile 3: Technical Skills Arsenal (Full Row / 3 Columns) -->
-                <div id="skills" class="md:col-span-3 bg-slate-900/70 border border-slate-800 rounded-3xl p-8 card-glow backdrop-blur-sm">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
-                            <i class="ph ph-code text-xl"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs font-mono uppercase tracking-wider text-brand-400 font-semibold">Technical Arsenal</span>
-                            <h3 class="text-xl font-bold text-white">Skills & Core Technologies</h3>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-                        <!-- Skill 1 -->
-                        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
-                            <div class="w-8 h-8 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center">
-                                <i class="ph ph-file-py text-lg"></i>
-                            </div>
-                            <span class="font-bold text-slate-100 text-sm">Python</span>
-                            <span class="text-[11px] text-slate-400">Data analysis, Pandas, NumPy, Scikit-Learn</span>
-                        </div>
-
-                        <!-- Skill 2 -->
-                        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
-                            <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center">
-                                <i class="ph ph-database text-lg"></i>
-                            </div>
-                            <span class="font-bold text-slate-100 text-sm">SQL</span>
-                            <span class="text-[11px] text-slate-400">Complex queries, joins, aggregations, schemas</span>
-                        </div>
-
-                        <!-- Skill 3 -->
-                        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
-                            <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center">
-                                <i class="ph ph-chart-bar text-lg"></i>
-                            </div>
-                            <span class="font-bold text-slate-100 text-sm">Power BI</span>
-                            <span class="text-[11px] text-slate-400">Interactive dashboards, KPI reports, DAX basics</span>
-                        </div>
-
-                        <!-- Skill 4 -->
-                        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
-                            <div class="w-8 h-8 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center">
-                                <i class="ph ph-brain text-lg"></i>
-                            </div>
-                            <span class="font-bold text-slate-100 text-sm">Machine Learning</span>
-                            <span class="text-[11px] text-slate-400">Supervised models, classification, regression</span>
-                        </div>
-
-                        <!-- Skill 5 -->
-                        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
-                            <div class="w-8 h-8 rounded-lg bg-pink-500/10 text-pink-400 flex items-center justify-center">
-                                <i class="ph ph-chart-pie-slice text-lg"></i>
-                            </div>
-                            <span class="font-bold text-slate-100 text-sm">Data Viz</span>
-                            <span class="text-[11px] text-slate-400">Visual storytelling, Matplotlib, Seaborn</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bento Tile 4: Applied Learning & Project Concepts (2 Columns) -->
-                <div id="focus" class="md:col-span-2 bg-slate-900/70 border border-slate-800 rounded-3xl p-8 card-glow backdrop-blur-sm space-y-6">
-                    <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
-                            <i class="ph ph-folder-open text-xl"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs font-mono uppercase tracking-wider text-brand-400 font-semibold">Practical Applications</span>
-                            <h3 class="text-xl font-bold text-white">Featured Project Work & Case Studies</h3>
-                        </div>
-                    </div>
-
-                    <div class="space-y-4">
-                        <!-- Project 1 -->
-                        <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/90 hover:border-brand-500/30 transition-colors">
-                            <div class="flex items-center justify-between mb-2">
-                                <h4 class="font-bold text-slate-100 text-base">Interactive Business Intelligence Dashboard</h4>
-                                <span class="text-xs font-mono text-amber-400 px-2.5 py-0.5 rounded-md bg-amber-500/10 border border-amber-500/20">Power BI</span>
-                            </div>
-                            <p class="text-slate-300 text-xs leading-relaxed mb-3">
-                                Designed dynamic visualization dashboards aggregating multi-dimensional business indicators. Incorporated interactive filters, performance KPI drill-downs, and trend analyses for data-backed decision making.
-                            </p>
-                            <div class="flex flex-wrap gap-2 text-[11px] text-slate-400 font-mono">
-                                <span>#DataVisualization</span> <span>#DashboardDesign</span> <span>#Analytics</span>
-                            </div>
-                        </div>
-
-                        <!-- Project 2 -->
-                        <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/90 hover:border-brand-500/30 transition-colors">
-                            <div class="flex items-center justify-between mb-2">
-                                <h4 class="font-bold text-slate-100 text-base">Predictive Modeling & Exploratory Data Analysis</h4>
-                                <span class="text-xs font-mono text-brand-400 px-2.5 py-0.5 rounded-md bg-brand-500/10 border border-brand-500/20">Python & Scikit-Learn</span>
-                            </div>
-                            <p class="text-slate-300 text-xs leading-relaxed mb-3">
-                                Implemented end-to-end data preprocessing, missing-value imputation, outlier detection, and trained supervised machine learning algorithms with cross-validation to predict outcomes on structured datasets.
-                            </p>
-                            <div class="flex flex-wrap gap-2 text-[11px] text-slate-400 font-mono">
-                                <span>#MachineLearning</span> <span>#Python</span> <span>#Pandas</span> <span>#EDA</span>
-                            </div>
-                        </div>
-
-                        <!-- Project 3 -->
-                        <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/90 hover:border-brand-500/30 transition-colors">
-                            <div class="flex items-center justify-between mb-2">
-                                <h4 class="font-bold text-slate-100 text-base">Relational Database Query Optimization & Management</h4>
-                                <span class="text-xs font-mono text-rose-400 px-2.5 py-0.5 rounded-md bg-rose-500/10 border border-rose-500/20">SQL</span>
-                            </div>
-                            <p class="text-slate-300 text-xs leading-relaxed mb-3">
-                                Designed normalized relational database schemas and authored multi-table JOINs, subqueries, and window functions to extract business intelligence from raw transactional records.
-                            </p>
-                            <div class="flex flex-wrap gap-2 text-[11px] text-slate-400 font-mono">
-                                <span>#SQL</span> <span>#DatabaseManagement</span> <span>#DataEngineering</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bento Tile 5: Soft Skills & Analytical Mindset (1 Column) -->
-                <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-8 card-glow backdrop-blur-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-9 h-9 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400">
-                                <i class="ph ph-sparkle text-xl"></i>
-                            </div>
-                            <span class="text-xs font-mono uppercase tracking-wider text-rose-400 font-semibold">Strengths</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-4">Professional Mindset</h3>
-                        
-                        <div class="space-y-4 text-xs">
-                            <div class="p-3 rounded-xl bg-slate-950/50 border border-slate-800/80">
-                                <strong class="text-brand-300 block mb-1">Analytical Problem Solving</strong>
-                                <p class="text-slate-400 leading-relaxed">Deconstructing complex data problems into logical, testable hypotheses.</p>
-                            </div>
-                            <div class="p-3 rounded-xl bg-slate-950/50 border border-slate-800/80">
-                                <strong class="text-amber-300 block mb-1">Data Storytelling</strong>
-                                <p class="text-slate-400 leading-relaxed">Translating raw numbers and metric tables into clear visual insights.</p>
-                            </div>
-                            <div class="p-3 rounded-xl bg-slate-950/50 border border-slate-800/80">
-                                <strong class="text-rose-300 block mb-1">Agile & Continuous Learner</strong>
-                                <p class="text-slate-400 leading-relaxed">Proactively acquiring modern data tools, cloud platforms, and ML libraries.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bento Tile 6: Contact & Connect CTA (Full Width) -->
-                <div class="md:col-span-3 bg-gradient-to-r from-brand-900/40 via-slate-900/80 to-slate-900/60 border border-brand-500/30 rounded-3xl p-8 sm:p-10 card-glow backdrop-blur-sm flex flex-col md:flex-row items-center justify-between gap-8">
-                    <div class="space-y-2 text-center md:text-left">
-                        <h3 class="text-2xl font-extrabold text-white">Let's Connect & Collaborate</h3>
-                        <p class="text-slate-300 text-sm max-w-xl">
-                            Interested in collaborating on Data Science projects, internships, or discussing data insights? Feel free to reach out directly.
-                        </p>
-                    </div>
-                    <div class="flex flex-wrap items-center justify-center gap-4">
-                        <a href="mailto:affrina700@gmail.com" class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm shadow-md shadow-brand-500/30 transition-all flex items-center gap-2">
-                            <i class="ph ph-envelope text-lg"></i>
-                            affrina700@gmail.com
-                        </a>
-                        <a href="resume.html" target="_blank" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition-all flex items-center gap-2">
-                            <i class="ph ph-download-simple text-lg text-brand-400"></i>
-                            Download Resume
-                        </a>
-                    </div>
-                </div>
-
             </div>
         </section>
 
+        <!-- DEDICATED SECTION: PROTOSEM (20-WEEK INDUSTRY INNOVATION JOURNEY) -->
+        <section id="protosem" class="space-y-8 scroll-mt-24">
+            
+            <!-- Section Header Banner -->
+            <div class="bg-gradient-to-b from-slate-900/90 via-slate-900/60 to-slate-950/80 border border-brand-500/30 rounded-3xl p-8 sm:p-10 card-glow backdrop-blur-md relative overflow-hidden">
+                <!-- Subtle decorative background gradient -->
+                <div class="absolute top-0 right-0 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 space-y-6">
+                    <!-- Section Label & Role Badge -->
+                    <div class="flex flex-wrap items-center justify-between gap-3">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-300 text-xs font-mono font-bold tracking-widest uppercase">
+                            <span class="w-2 h-2 rounded-full bg-brand-400 animate-ping"></span>
+                            PROTOSEM
+                        </div>
+                        <div class="px-3.5 py-1 rounded-full bg-slate-800/90 border border-slate-700 text-slate-300 text-xs font-medium">
+                            Role: <strong class="text-white font-semibold">Innovation Engineer Trainee</strong>
+                        </div>
+                    </div>
+
+                    <!-- Main Heading & Descriptor -->
+                    <div class="space-y-2">
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+                            PRICE ProtoSem
+                        </h2>
+                        <p class="text-brand-400 font-mono text-sm sm:text-base font-semibold">
+                            20-Week Industry-Integrated Innovation Programme
+                        </p>
+                    </div>
+
+                    <!-- Descriptions (Verbatim from specification) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-300 text-sm leading-relaxed border-t border-slate-800/80 pt-6">
+                        <p>
+                            Selected for a 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.
+                        </p>
+                        <p>
+                            Working with industry problem statements to explore, develop, and validate practical technology solutions beyond conventional classroom learning.
+                        </p>
+                    </div>
+
+                    <!-- Domain / Focus Tags (Programme Disciplines) -->
+                    <div class="pt-4 space-y-3">
+                        <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Programme Disciplines & Focus Areas:</div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/90 text-slate-200 text-xs font-medium hover:border-brand-500/50 hover:bg-slate-800 transition-colors">
+                                <i class="ph ph-storefront text-base text-brand-400"></i>
+                                Phygital Retail & Intelligent Commerce
+                            </span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/90 text-slate-200 text-xs font-medium hover:border-brand-500/50 hover:bg-slate-800 transition-colors">
+                                <i class="ph ph-cpu text-base text-rose-400"></i>
+                                AI & Analytics
+                            </span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/90 text-slate-200 text-xs font-medium hover:border-brand-500/50 hover:bg-slate-800 transition-colors">
+                                <i class="ph ph-plugs-connected text-base text-amber-400"></i>
+                                Intelligent Systems & IoT
+                            </span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/90 text-slate-200 text-xs font-medium hover:border-brand-500/50 hover:bg-slate-800 transition-colors">
+                                <i class="ph ph-wrench text-base text-orange-400"></i>
+                                Prototyping
+                            </span>
+                            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700/90 text-slate-200 text-xs font-medium hover:border-brand-500/50 hover:bg-slate-800 transition-colors">
+                                <i class="ph ph-rocket-launch text-base text-pink-400"></i>
+                                Entrepreneurship
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Visual 20-Week Programme Progression Track -->
+            <div class="bg-slate-900/60 border border-slate-800 rounded-3xl p-6 backdrop-blur-sm space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-brand-400 font-semibold">
+                        <i class="ph ph-path text-base"></i>
+                        <span>20-Week Programme Progression</span>
+                    </div>
+                    <div class="text-xs text-slate-400 font-mono">
+                        One Programme · Four Phases · Twenty Weeks
+                    </div>
+                </div>
+
+                <!-- Milestone Track -->
+                <div class="relative py-2">
+                    <div class="hidden sm:flex items-center justify-between relative">
+                        <!-- Connecting Line -->
+                        <div class="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-1 bg-slate-800 rounded-full z-0"></div>
+                        <div class="absolute left-0 w-1/4 top-1/2 -translate-y-1/2 h-1 bg-gradient-to-r from-brand-500 to-orange-400 rounded-full z-0"></div>
+
+                        <!-- Milestone 01 -->
+                        <div class="relative z-10 flex flex-col items-center gap-1.5 text-center">
+                            <div class="w-8 h-8 rounded-full bg-brand-500 text-white font-mono font-bold text-xs flex items-center justify-center shadow-lg shadow-brand-500/40 ring-4 ring-slate-950">
+                                01
+                            </div>
+                            <span class="text-[11px] font-mono text-brand-300 font-semibold">Phase 01</span>
+                            <span class="text-[10px] text-slate-500">Weeks 01–05</span>
+                        </div>
+
+                        <!-- Milestone 05 -->
+                        <div class="relative z-10 flex flex-col items-center gap-1.5 text-center">
+                            <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 text-slate-300 font-mono font-bold text-xs flex items-center justify-center ring-4 ring-slate-950">
+                                05
+                            </div>
+                            <span class="text-[11px] font-mono text-slate-400 font-semibold">Phase 02</span>
+                            <span class="text-[10px] text-slate-500">Weeks 06–10</span>
+                        </div>
+
+                        <!-- Milestone 10 -->
+                        <div class="relative z-10 flex flex-col items-center gap-1.5 text-center">
+                            <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 text-slate-300 font-mono font-bold text-xs flex items-center justify-center ring-4 ring-slate-950">
+                                10
+                            </div>
+                            <span class="text-[11px] font-mono text-slate-400 font-semibold">Phase 03</span>
+                            <span class="text-[10px] text-slate-500">Weeks 11–15</span>
+                        </div>
+
+                        <!-- Milestone 15 -->
+                        <div class="relative z-10 flex flex-col items-center gap-1.5 text-center">
+                            <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 text-slate-300 font-mono font-bold text-xs flex items-center justify-center ring-4 ring-slate-950">
+                                15
+                            </div>
+                            <span class="text-[11px] font-mono text-slate-400 font-semibold">Phase 04</span>
+                            <span class="text-[10px] text-slate-500">Weeks 16–20</span>
+                        </div>
+
+                        <!-- Milestone 20 -->
+                        <div class="relative z-10 flex flex-col items-center gap-1.5 text-center">
+                            <div class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 text-slate-300 font-mono font-bold text-xs flex items-center justify-center ring-4 ring-slate-950">
+                                20
+                            </div>
+                            <span class="text-[11px] font-mono text-slate-400 font-semibold">Outcome</span>
+                            <span class="text-[10px] text-slate-500">Demo Day</span>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Equivalent Track Indicator -->
+                    <div class="sm:hidden flex items-center justify-between text-xs font-mono text-slate-400 px-2 py-1 bg-slate-950/80 rounded-xl border border-slate-800">
+                        <span class="text-brand-400 font-bold">01</span>
+                        <span>━━━━</span>
+                        <span>05</span>
+                        <span>━━━━</span>
+                        <span>10</span>
+                        <span>━━━━</span>
+                        <span>15</span>
+                        <span>━━━━</span>
+                        <span>20</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase Navigation Controls -->
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                <div>
+                    <h3 class="text-xl font-bold text-white tracking-tight">Programme Archive & Weekly Logs</h3>
+                    <p class="text-xs text-slate-400">Select a phase to filter the 20-week learning progression.</p>
+                </div>
+
+                <!-- Interactive Filter Tabs -->
+                <div class="inline-flex flex-wrap p-1.5 rounded-2xl bg-slate-900 border border-slate-800 gap-1.5" role="tablist" aria-label="ProtoSem Phase Filter">
+                    <button onclick="filterPhase('all')" id="tab-all" class="phase-tab active px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-brand-500" role="tab" aria-selected="true">
+                        All (20 Weeks)
+                    </button>
+                    <button onclick="filterPhase('phase-1')" id="tab-phase-1" class="phase-tab px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-brand-500" role="tab" aria-selected="false">
+                        Phase 01 (W01–05)
+                    </button>
+                    <button onclick="filterPhase('phase-2')" id="tab-phase-2" class="phase-tab px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-brand-500" role="tab" aria-selected="false">
+                        Phase 02 (W06–10)
+                    </button>
+                    <button onclick="filterPhase('phase-3')" id="tab-phase-3" class="phase-tab px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-brand-500" role="tab" aria-selected="false">
+                        Phase 03 (W11–15)
+                    </button>
+                    <button onclick="filterPhase('phase-4')" id="tab-phase-4" class="phase-tab px-3.5 py-1.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white border border-transparent transition-all focus:outline-none focus:ring-2 focus:ring-brand-500" role="tab" aria-selected="false">
+                        Phase 04 (W16–20)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dynamic 20-Week Grid Container (Data-Driven with Static Fallback) -->
+            <div id="protosem-weeks-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+                <!-- Javascript will populate the 20 structured week cards dynamically based on protoSemWeeks data -->
+            </div>
+
+        </section>
+
+        <!-- TECHNICAL SKILLS ARSENAL -->
+        <section id="skills" class="bg-slate-900/70 border border-slate-800 rounded-3xl p-8 card-glow backdrop-blur-sm">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
+                    <i class="ph ph-code text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-wider text-brand-400 font-semibold">Technical Arsenal</span>
+                    <h3 class="text-xl font-bold text-white">Skills & Core Technologies</h3>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                <!-- Skill 1 -->
+                <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center">
+                        <i class="ph ph-file-py text-lg"></i>
+                    </div>
+                    <span class="font-bold text-slate-100 text-sm">Python</span>
+                    <span class="text-[11px] text-slate-400">Data analysis, Pandas, NumPy, Scikit-Learn</span>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center">
+                        <i class="ph ph-database text-lg"></i>
+                    </div>
+                    <span class="font-bold text-slate-100 text-sm">SQL</span>
+                    <span class="text-[11px] text-slate-400">Complex queries, joins, aggregations, schemas</span>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                        <i class="ph ph-chart-bar text-lg"></i>
+                    </div>
+                    <span class="font-bold text-slate-100 text-sm">Power BI</span>
+                    <span class="text-[11px] text-slate-400">Interactive dashboards, KPI reports, DAX basics</span>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center">
+                        <i class="ph ph-brain text-lg"></i>
+                    </div>
+                    <span class="font-bold text-slate-100 text-sm">Machine Learning</span>
+                    <span class="text-[11px] text-slate-400">Supervised models, classification, regression</span>
+                </div>
+
+                <!-- Skill 5 -->
+                <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
+                    <div class="w-8 h-8 rounded-lg bg-pink-500/10 text-pink-400 flex items-center justify-center">
+                        <i class="ph ph-chart-pie-slice text-lg"></i>
+                    </div>
+                    <span class="font-bold text-slate-100 text-sm">Data Viz</span>
+                    <span class="text-[11px] text-slate-400">Visual storytelling, Matplotlib, Seaborn</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- APPLIED LEARNING & PRACTICAL PROJECTS -->
+        <section id="focus" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Practical Applications (2 Columns) -->
+            <div class="md:col-span-2 bg-slate-900/70 border border-slate-800 rounded-3xl p-8 card-glow backdrop-blur-sm space-y-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
+                        <i class="ph ph-folder-open text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-mono uppercase tracking-wider text-brand-400 font-semibold">Practical Applications</span>
+                        <h3 class="text-xl font-bold text-white">Featured Project Work & Case Studies</h3>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Project 1 -->
+                    <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/90 hover:border-brand-500/30 transition-colors">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-slate-100 text-base">Interactive Business Intelligence Dashboard</h4>
+                            <span class="text-xs font-mono text-amber-400 px-2.5 py-0.5 rounded-md bg-amber-500/10 border border-amber-500/20">Power BI</span>
+                        </div>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                            Designed dynamic visualization dashboards aggregating multi-dimensional business indicators. Incorporated interactive filters, performance KPI drill-downs, and trend analyses for data-backed decision making.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-[11px] text-slate-400 font-mono">
+                            <span>#DataVisualization</span> <span>#DashboardDesign</span> <span>#Analytics</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/90 hover:border-brand-500/30 transition-colors">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-slate-100 text-base">Predictive Modeling & Exploratory Data Analysis</h4>
+                            <span class="text-xs font-mono text-brand-400 px-2.5 py-0.5 rounded-md bg-brand-500/10 border border-brand-500/20">Python & Scikit-Learn</span>
+                        </div>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                            Implemented end-to-end data preprocessing, missing-value imputation, outlier detection, and trained supervised machine learning algorithms with cross-validation to predict outcomes on structured datasets.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-[11px] text-slate-400 font-mono">
+                            <span>#MachineLearning</span> <span>#Python</span> <span>#Pandas</span> <span>#EDA</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/90 hover:border-brand-500/30 transition-colors">
+                        <div class="flex items-center justify-between mb-2">
+                            <h4 class="font-bold text-slate-100 text-base">Relational Database Query Optimization & Management</h4>
+                            <span class="text-xs font-mono text-rose-400 px-2.5 py-0.5 rounded-md bg-rose-500/10 border border-rose-500/20">SQL</span>
+                        </div>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                            Designed normalized relational database schemas and authored multi-table JOINs, subqueries, and window functions to extract business intelligence from raw transactional records.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-[11px] text-slate-400 font-mono">
+                            <span>#SQL</span> <span>#DatabaseManagement</span> <span>#DataEngineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strengths & Mindset (1 Column) -->
+            <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-8 card-glow backdrop-blur-sm flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-9 h-9 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400">
+                            <i class="ph ph-sparkle text-xl"></i>
+                        </div>
+                        <span class="text-xs font-mono uppercase tracking-wider text-rose-400 font-semibold">Strengths</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-4">Professional Mindset</h3>
+                    
+                    <div class="space-y-4 text-xs">
+                        <div class="p-3 rounded-xl bg-slate-950/50 border border-slate-800/80">
+                            <strong class="text-brand-300 block mb-1">Analytical Problem Solving</strong>
+                            <p class="text-slate-400 leading-relaxed">Deconstructing complex data problems into logical, testable hypotheses.</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-950/50 border border-slate-800/80">
+                            <strong class="text-amber-300 block mb-1">Data Storytelling</strong>
+                            <p class="text-slate-400 leading-relaxed">Translating raw numbers and metric tables into clear visual insights.</p>
+                        </div>
+                        <div class="p-3 rounded-xl bg-slate-950/50 border border-slate-800/80">
+                            <strong class="text-rose-300 block mb-1">Agile & Continuous Learner</strong>
+                            <p class="text-slate-400 leading-relaxed">Proactively acquiring modern data tools, cloud platforms, and ML libraries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact & Connect CTA (Full Width) -->
+            <div class="md:col-span-3 bg-gradient-to-r from-brand-900/40 via-slate-900/80 to-slate-900/60 border border-brand-500/30 rounded-3xl p-8 sm:p-10 card-glow backdrop-blur-sm flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-2 text-center md:text-left">
+                    <h3 class="text-2xl font-extrabold text-white">Let's Connect & Collaborate</h3>
+                    <p class="text-slate-300 text-sm max-w-xl">
+                        Interested in collaborating on Data Science projects, ProtoSem initiatives, internships, or discussing data insights? Feel free to reach out directly.
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <a href="mailto:affrina700@gmail.com" class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm shadow-md shadow-brand-500/30 transition-all flex items-center gap-2">
+                        <i class="ph ph-envelope text-lg"></i>
+                        affrina700@gmail.com
+                    </a>
+                    <a href="resume.html" target="_blank" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition-all flex items-center gap-2">
+                        <i class="ph ph-download-simple text-lg text-brand-400"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
     </main>
+
+    <!-- Interactive ProtoSem Modal / Notification Dialog -->
+    <dialog id="protosem-modal" class="backdrop:bg-slate-950/80 backdrop:backdrop-blur-sm bg-slate-900 border border-brand-500/40 rounded-3xl p-8 text-slate-100 max-w-md w-[90%] shadow-2xl shadow-brand-500/20 m-auto">
+        <div class="space-y-5 text-center">
+            <div class="w-12 h-12 rounded-2xl bg-brand-500/15 border border-brand-500/30 text-brand-400 mx-auto flex items-center justify-center text-2xl">
+                <i class="ph ph-journal-bookmark"></i>
+            </div>
+            <div class="space-y-2">
+                <div id="modal-phase" class="text-xs font-mono text-brand-400 font-bold uppercase tracking-widest">Phase 01</div>
+                <h3 id="modal-week" class="text-2xl font-extrabold text-white">WEEK 01</h3>
+                <div class="inline-flex px-3 py-1 rounded-full bg-slate-800 text-amber-300 text-xs font-mono border border-slate-700">
+                    FIELD NOTES IN PROGRESS
+                </div>
+            </div>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                The technical deep-dive, industry problem exploration, and learning reflections for this week will be published here soon as part of the continuous 20-week programme archive.
+            </p>
+            <div class="pt-2">
+                <button onclick="document.getElementById('protosem-modal').close()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 text-white font-semibold text-xs shadow-md transition-all">
+                    Got it
+                </button>
+            </div>
+        </div>
+    </dialog>
 
     <!-- Footer -->
     <footer class="relative z-10 border-t border-slate-800/80 bg-slate-950 py-8 text-center text-xs text-slate-500">
@@ -404,6 +644,125 @@
             </div>
         </div>
     </footer>
+
+    <!-- PROTOSEM DATA ARCHITECTURE & INTERACTIVITY SCRIPT -->
+    <script>
+        // Data-driven architecture for the 20-week journey
+        // Future blog stories can easily be linked here by updating slug / status / blogUrl
+        const protoSemWeeks = [
+            { week: 1, phase: 1, phaseLabel: "PHASE 01", slug: "week-01", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 2, phase: 1, phaseLabel: "PHASE 01", slug: "week-02", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 3, phase: 1, phaseLabel: "PHASE 01", slug: "week-03", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 4, phase: 1, phaseLabel: "PHASE 01", slug: "week-04", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 5, phase: 1, phaseLabel: "PHASE 01", slug: "week-05", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 6, phase: 2, phaseLabel: "PHASE 02", slug: "week-06", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 7, phase: 2, phaseLabel: "PHASE 02", slug: "week-07", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 8, phase: 2, phaseLabel: "PHASE 02", slug: "week-08", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 9, phase: 2, phaseLabel: "PHASE 02", slug: "week-09", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 10, phase: 2, phaseLabel: "PHASE 02", slug: "week-10", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 11, phase: 3, phaseLabel: "PHASE 03", slug: "week-11", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 12, phase: 3, phaseLabel: "PHASE 03", slug: "week-12", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 13, phase: 3, phaseLabel: "PHASE 03", slug: "week-13", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 14, phase: 3, phaseLabel: "PHASE 03", slug: "week-14", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 15, phase: 3, phaseLabel: "PHASE 03", slug: "week-15", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 16, phase: 4, phaseLabel: "PHASE 04", slug: "week-16", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 17, phase: 4, phaseLabel: "PHASE 04", slug: "week-17", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 18, phase: 4, phaseLabel: "PHASE 04", slug: "week-18", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 19, phase: 4, phaseLabel: "PHASE 04", slug: "week-19", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" },
+            { week: 20, phase: 4, phaseLabel: "PHASE 04", slug: "week-20", status: "COMING SOON", sublabel: "FIELD NOTES IN PROGRESS" }
+        ];
+
+        // Render cards
+        function renderWeekCards(filter = 'all') {
+            const container = document.getElementById('protosem-weeks-container');
+            container.innerHTML = '';
+
+            const filteredWeeks = filter === 'all' 
+                ? protoSemWeeks 
+                : protoSemWeeks.filter(w => `phase-${w.phase}` === filter);
+
+            filteredWeeks.forEach(item => {
+                const weekNumPadded = item.week < 10 ? `0${item.week}` : `${item.week}`;
+                
+                const card = document.createElement('a');
+                card.href = `#protosem-week-${weekNumPadded}`;
+                card.id = `protosem-week-${weekNumPadded}`;
+                card.className = `week-card group relative p-5 rounded-2xl bg-slate-900/70 border border-slate-800/90 flex flex-col justify-between gap-4 backdrop-blur-sm cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-brand-500`;
+                card.setAttribute('aria-label', `ProtoSem Week ${weekNumPadded} - ${item.status}`);
+                
+                card.onclick = (e) => {
+                    e.preventDefault();
+                    openWeekModal(item);
+                };
+
+                card.innerHTML = `
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[11px] font-mono uppercase tracking-wider text-slate-400 font-semibold flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 rounded-full ${item.phase === 1 ? 'bg-orange-400' : item.phase === 2 ? 'bg-amber-400' : item.phase === 3 ? 'bg-rose-400' : 'bg-pink-400'}"></span>
+                                ${item.phaseLabel}
+                            </span>
+                            <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-800/90 text-brand-300/90 border border-slate-700/80">
+                                W${weekNumPadded}
+                            </span>
+                        </div>
+                        
+                        <div>
+                            <div class="week-number text-2xl font-extrabold text-white tracking-tight group-hover:text-brand-300 transition-colors">
+                                WEEK ${weekNumPadded}
+                            </div>
+                            <div class="text-[11px] font-mono text-slate-400 mt-1 flex items-center gap-1.5">
+                                <i class="ph ph-hourglass-simple text-brand-400"></i>
+                                <span>${item.status}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs text-slate-500 group-hover:text-slate-300 transition-colors">
+                        <span class="text-[10px] font-mono tracking-wider">${item.sublabel}</span>
+                        <div class="week-arrow flex items-center gap-1 text-brand-400 transition-transform">
+                            <span class="text-[11px] font-semibold opacity-0 group-hover:opacity-100 transition-opacity">Read</span>
+                            <i class="ph ph-arrow-right text-sm"></i>
+                        </div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        // Phase Filter Handler
+        function filterPhase(phaseKey) {
+            document.querySelectorAll('.phase-tab').forEach(tab => {
+                tab.classList.remove('active');
+                tab.setAttribute('aria-selected', 'false');
+            });
+
+            const activeTab = document.getElementById(`tab-${phaseKey}`);
+            if (activeTab) {
+                activeTab.classList.add('active');
+                activeTab.setAttribute('aria-selected', 'true');
+            }
+
+            renderWeekCards(phaseKey);
+        }
+
+        // Open Modal Details
+        function openWeekModal(item) {
+            const weekNumPadded = item.week < 10 ? `0${item.week}` : `${item.week}`;
+            document.getElementById('modal-phase').innerText = `${item.phaseLabel} · WEEK ${weekNumPadded}`;
+            document.getElementById('modal-week').innerText = `WEEK ${weekNumPadded}`;
+            const modal = document.getElementById('protosem-modal');
+            if (modal) {
+                modal.showModal();
+            }
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderWeekCards('all');
+        });
+    </script>
 
 </body>
 </html>
