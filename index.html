@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affrina A | Data Science Portfolio</title>
+    <meta name="description" content="Portfolio of Affrina A - 2nd Year B.Sc. Data Science Student at Kumaraguru Institutions. Skilled in Python, SQL, Power BI, and Machine Learning.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons CDN -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                            accent: '#f43f5e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-blur-1 {
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.28) 0%, rgba(244, 63, 94, 0.15) 50%, rgba(0, 0, 0, 0) 70%);
+        }
+        .gradient-blur-2 {
+            background: radial-gradient(circle, rgba(251, 146, 60, 0.22) 0%, rgba(217, 70, 239, 0.12) 50%, rgba(0, 0, 0, 0) 70%);
+        }
+        .card-glow {
+            transition: all 0.25s ease;
+        }
+        .card-glow:hover {
+            border-color: rgba(249, 115, 22, 0.45);
+            box-shadow: 0 10px 30px -10px rgba(249, 115, 22, 0.15);
+            transform: translateY(-2px);
+        }
+        .grid-pattern {
+            background-size: 32px 32px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white relative overflow-x-hidden min-h-screen">
+
+    <!-- Background Grid & Glowing Blobs -->
+    <div class="fixed inset-0 grid-pattern pointer-events-none z-0"></div>
+    <div class="fixed top-[-10%] left-[-10%] w-[550px] h-[550px] gradient-blur-1 rounded-full blur-3xl pointer-events-none z-0"></div>
+    <div class="fixed top-[40%] right-[-10%] w-[600px] h-[600px] gradient-blur-2 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-white font-bold text-lg shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
+                    A
+                </div>
+                <div>
+                    <span class="font-bold text-slate-100 tracking-tight block group-hover:text-brand-400 transition-colors">Affrina A</span>
+                    <span class="text-xs text-slate-400 font-mono block">Data Science</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-brand-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-brand-400 transition-colors">Skills</a>
+                <a href="#focus" class="hover:text-brand-400 transition-colors">Current Focus</a>
+                <a href="#education" class="hover:text-brand-400 transition-colors">Education</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="resume.html" target="_blank" class="px-4 py-2 text-xs md:text-sm font-semibold rounded-lg bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 hover:border-brand-500/50 transition-all flex items-center gap-2">
+                    <i class="ph ph-file-text text-base text-brand-400"></i>
+                    <span>ATS Resume</span>
+                </a>
+                <a href="mailto:affrina700@gmail.com" class="px-4 py-2 text-xs md:text-sm font-semibold rounded-lg bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 text-white shadow-md shadow-brand-500/25 transition-all flex items-center gap-2">
+                    <i class="ph ph-paper-plane-tilt text-base"></i>
+                    <span class="hidden sm:inline">Contact</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10 max-w-6xl mx-auto px-6 py-12 space-y-16">
+
+        <!-- HERO SECTION (Glowing Gradient Blob Style) -->
+        <section id="hero" class="relative pt-8 pb-12 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="flex-1 space-y-6">
+                <!-- Status Badge -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-300 text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+                    2nd Year B.Sc. Data Science · Kumaraguru Institutions
+                </div>
+
+                <!-- Headline -->
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+                    Decoding Data, <br class="hidden sm:inline">
+                    <span class="bg-gradient-to-r from-brand-400 via-orange-300 to-rose-400 bg-clip-text text-transparent">
+                        Predicting Possibilities.
+                    </span>
+                </h1>
+
+                <!-- Bio Description -->
+                <p class="text-slate-300 text-base md:text-lg max-w-2xl leading-relaxed">
+                    Hello! I'm <strong class="text-white font-semibold">Affrina A</strong>, an aspiring Data Scientist passionate about uncovering patterns, training machine learning models, and transforming complex information into intuitive dashboards.
+                </p>
+
+                <!-- Call to Action Buttons -->
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+                    <a href="resume.html" target="_blank" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-brand-500 to-rose-500 hover:from-brand-600 hover:to-rose-600 text-white font-bold text-sm shadow-lg shadow-brand-500/25 transition-all flex items-center gap-2">
+                        <i class="ph ph-file-pdf text-lg"></i>
+                        View ATS Resume
+                    </a>
+                    <a href="mailto:affrina700@gmail.com" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-slate-500 font-semibold text-sm transition-all flex items-center gap-2">
+                        <i class="ph ph-envelope-simple text-lg text-brand-400"></i>
+                        affrina700@gmail.com
+                    </a>
+                    <a href="https://github.com/affrina700-eng" target="_blank" class="p-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700 hover:border-slate-500 transition-all flex items-center justify-center" title="GitHub Profile">
+                        <i class="ph ph-github-logo text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Avatar Card -->
+            <div class="relative flex-shrink-0">
+                <div class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-3xl p-1 bg-gradient-to-tr from-brand-500 via-rose-500 to-amber-300 shadow-2xl shadow-brand-500/20">
+                    <div class="w-full h-full bg-slate-900 rounded-[22px] overflow-hidden flex flex-col items-center justify-center p-4 relative">
+                        <img src="https://ui-avatars.com/api/?name=Affrina+A&background=f97316&color=fff&size=256&bold=true&font-size=0.4" 
+                             alt="Affrina A Profile" 
+                             class="w-32 h-32 rounded-2xl shadow-md border-2 border-brand-500/40 mb-3 object-cover">
+                        <span class="text-sm font-bold text-slate-200">Affrina A</span>
+                        <span class="text-xs text-brand-400 font-mono">Data Science Scholar</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENTO GRID LAYOUT -->
+        <section id="about" class="space-y-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Overview & Highlights</h2>
+                    <p class="text-sm text-slate-400">Core competencies, academic background, and focus areas.</p>
+                </div>
+            </div>
+
+            <!-- The Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Bento Tile 1: Learning Journey & About (2 Columns Wide) -->
+                <div class="md:col-span-2 bg-slate-900/70 border border-slate-800 rounded-3xl p-8 card-glow backdrop-blur-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
+                                <i class="ph ph-compass text-xl"></i>
+                            </div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-brand-400 font-semibold">About My Journey</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Driven by Curiosity, Grounded in Analytics</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Currently in my 2nd year of <strong class="text-slate-100">B.Sc. Data Science at Kumaraguru Institutions</strong>, I focus on building a robust analytical foundation. I enjoy working through datasets, engineering features, evaluating statistical distributions, and deriving meaningful narratives from data.
+                        </p>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Whether it's querying complex relational databases with SQL, developing machine learning classifiers in Python, or building interactive dashboards in Power BI, I am committed to continuous learning and solving real-world challenges.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3 pt-6 border-t border-slate-800/80 mt-6">
+                        <span class="text-xs font-mono text-slate-400">Current Focus:</span>
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Predictive ML</span>
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Power BI Dashboards</span>
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-200 border border-slate-700">Advanced SQL</span>
+                    </div>
+                </div>
+
+                <!-- Bento Tile 2: Academic Profile (1 Column) -->
+                <div id="education" class="bg-slate-900/70 border border-slate-800 rounded-3xl p-8 card-glow backdrop-blur-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-9 h-9 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-400">
+                                <i class="ph ph-graduation-cap text-xl"></i>
+                            </div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-orange-400 font-semibold">Education</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">B.Sc. Data Science</h3>
+                        <p class="text-brand-400 text-xs font-semibold mb-3">Kumaraguru Institutions</p>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-4">
+                            Second Year Undergraduate Program (2024 – 2027) with comprehensive training in Data Analysis, Mathematics, and Computing.
+                        </p>
+                        <div class="space-y-2">
+                            <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider">Key Coursework:</div>
+                            <ul class="text-xs text-slate-300 space-y-1.5">
+                                <li class="flex items-center gap-2"><i class="ph ph-check-circle text-brand-400"></i> Applied Statistics & Probability</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check-circle text-brand-400"></i> Database Management (DBMS)</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check-circle text-brand-400"></i> Machine Learning Foundations</li>
+                                <li class="flex items-center gap-2"><i class="ph ph-check-circle text-brand-400"></i> Data Visualization Techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Tile 3: Technical Skills Arsenal (Full Row / 3 Columns) -->
+                <div id="skills" class="md:col-span-3 bg-slate-900/70 border border-slate-800 rounded-3xl p-8 card-glow backdrop-blur-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
+                            <i class="ph ph-code text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-brand-400 font-semibold">Technical Arsenal</span>
+                            <h3 class="text-xl font-bold text-white">Skills & Core Technologies</h3>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                        <!-- Skill 1 -->
+                        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
+                            <div class="w-8 h-8 rounded-lg bg-orange-500/10 text-orange-400 flex items-center justify-center">
+                                <i class="ph ph-file-py text-lg"></i>
+                            </div>
+                            <span class="font-bold text-slate-100 text-sm">Python</span>
+                            <span class="text-[11px] text-slate-400">Data analysis, Pandas, NumPy, Scikit-Learn</span>
+                        </div>
+
+                        <!-- Skill 2 -->
+                        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
+                            <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-400 flex items-center justify-center">
+                                <i class="ph ph-database text-lg"></i>
+                            </div>
+                            <span class="font-bold text-slate-100 text-sm">SQL</span>
+                            <span class="text-[11px] text-slate-400">Complex queries, joins, aggregations, schemas</span>
+                        </div>
+
+                        <!-- Skill 3 -->
+                        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
+                            <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                                <i class="ph ph-chart-bar text-lg"></i>
+                            </div>
+                            <span class="font-bold text-slate-100 text-sm">Power BI</span>
+                            <span class="text-[11px] text-slate-400">Interactive dashboards, KPI reports, DAX basics</span>
+                        </div>
+
+                        <!-- Skill 4 -->
+                        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
+                            <div class="w-8 h-8 rounded-lg bg-rose-500/10 text-rose-400 flex items-center justify-center">
+                                <i class="ph ph-brain text-lg"></i>
+                            </div>
+                            <span class="font-bold text-slate-100 text-sm">Machine Learning</span>
+                            <span class="text-[11px] text-slate-400">Supervised models, classification, regression</span>
+                        </div>
+
+                        <!-- Skill 5 -->
+                        <div class="p-4 rounded-2xl bg-slate-950/70 border border-slate-800/90 flex flex-col gap-2">
+                            <div class="w-8 h-8 rounded-lg bg-pink-500/10 text-pink-400 flex items-center justify-center">
+                                <i class="ph ph-chart-pie-slice text-lg"></i>
+                            </div>
+                            <span class="font-bold text-slate-100 text-sm">Data Viz</span>
+                            <span class="text-[11px] text-slate-400">Visual storytelling, Matplotlib, Seaborn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Tile 4: Applied Learning & Project Concepts (2 Columns) -->
+                <div id="focus" class="md:col-span-2 bg-slate-900/70 border border-slate-800 rounded-3xl p-8 card-glow backdrop-blur-sm space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400">
+                            <i class="ph ph-folder-open text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-brand-400 font-semibold">Practical Applications</span>
+                            <h3 class="text-xl font-bold text-white">Featured Project Work & Case Studies</h3>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Project 1 -->
+                        <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/90 hover:border-brand-500/30 transition-colors">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-bold text-slate-100 text-base">Interactive Business Intelligence Dashboard</h4>
+                                <span class="text-xs font-mono text-amber-400 px-2.5 py-0.5 rounded-md bg-amber-500/10 border border-amber-500/20">Power BI</span>
+                            </div>
+                            <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                                Designed dynamic visualization dashboards aggregating multi-dimensional business indicators. Incorporated interactive filters, performance KPI drill-downs, and trend analyses for data-backed decision making.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-[11px] text-slate-400 font-mono">
+                                <span>#DataVisualization</span> <span>#DashboardDesign</span> <span>#Analytics</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/90 hover:border-brand-500/30 transition-colors">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-bold text-slate-100 text-base">Predictive Modeling & Exploratory Data Analysis</h4>
+                                <span class="text-xs font-mono text-brand-400 px-2.5 py-0.5 rounded-md bg-brand-500/10 border border-brand-500/20">Python & Scikit-Learn</span>
+                            </div>
+                            <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                                Implemented end-to-end data preprocessing, missing-value imputation, outlier detection, and trained supervised machine learning algorithms with cross-validation to predict outcomes on structured datasets.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-[11px] text-slate-400 font-mono">
+                                <span>#MachineLearning</span> <span>#Python</span> <span>#Pandas</span> <span>#EDA</span>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="p-5 rounded-2xl bg-slate-950/60 border border-slate-800/90 hover:border-brand-500/30 transition-colors">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-bold text-slate-100 text-base">Relational Database Query Optimization & Management</h4>
+                                <span class="text-xs font-mono text-rose-400 px-2.5 py-0.5 rounded-md bg-rose-500/10 border border-rose-500/20">SQL</span>
+                            </div>
+                            <p class="text-slate-300 text-xs leading-relaxed mb-3">
+                                Designed normalized relational database schemas and authored multi-table JOINs, subqueries, and window functions to extract business intelligence from raw transactional records.
+                            </p>
+                            <div class="flex flex-wrap gap-2 text-[11px] text-slate-400 font-mono">
+                                <span>#SQL</span> <span>#DatabaseManagement</span> <span>#DataEngineering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Tile 5: Soft Skills & Analytical Mindset (1 Column) -->
+                <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-8 card-glow backdrop-blur-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-9 h-9 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400">
+                                <i class="ph ph-sparkle text-xl"></i>
+                            </div>
+                            <span class="text-xs font-mono uppercase tracking-wider text-rose-400 font-semibold">Strengths</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-4">Professional Mindset</h3>
+                        
+                        <div class="space-y-4 text-xs">
+                            <div class="p-3 rounded-xl bg-slate-950/50 border border-slate-800/80">
+                                <strong class="text-brand-300 block mb-1">Analytical Problem Solving</strong>
+                                <p class="text-slate-400 leading-relaxed">Deconstructing complex data problems into logical, testable hypotheses.</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-950/50 border border-slate-800/80">
+                                <strong class="text-amber-300 block mb-1">Data Storytelling</strong>
+                                <p class="text-slate-400 leading-relaxed">Translating raw numbers and metric tables into clear visual insights.</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-950/50 border border-slate-800/80">
+                                <strong class="text-rose-300 block mb-1">Agile & Continuous Learner</strong>
+                                <p class="text-slate-400 leading-relaxed">Proactively acquiring modern data tools, cloud platforms, and ML libraries.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Tile 6: Contact & Connect CTA (Full Width) -->
+                <div class="md:col-span-3 bg-gradient-to-r from-brand-900/40 via-slate-900/80 to-slate-900/60 border border-brand-500/30 rounded-3xl p-8 sm:p-10 card-glow backdrop-blur-sm flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="space-y-2 text-center md:text-left">
+                        <h3 class="text-2xl font-extrabold text-white">Let's Connect & Collaborate</h3>
+                        <p class="text-slate-300 text-sm max-w-xl">
+                            Interested in collaborating on Data Science projects, internships, or discussing data insights? Feel free to reach out directly.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <a href="mailto:affrina700@gmail.com" class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-sm shadow-md shadow-brand-500/30 transition-all flex items-center gap-2">
+                            <i class="ph ph-envelope text-lg"></i>
+                            affrina700@gmail.com
+                        </a>
+                        <a href="resume.html" target="_blank" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition-all flex items-center gap-2">
+                            <i class="ph ph-download-simple text-lg text-brand-400"></i>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-slate-800/80 bg-slate-950 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 Affrina A · B.Sc. Data Science, Kumaraguru Institutions</p>
+            <div class="flex items-center gap-4 text-slate-400">
+                <a href="https://github.com/affrina700-eng" target="_blank" class="hover:text-brand-400 transition-colors">GitHub</a>
+                <span>•</span>
+                <a href="resume.html" target="_blank" class="hover:text-brand-400 transition-colors">Resume</a>
+                <span>•</span>
+                <a href="mailto:affrina700@gmail.com" class="hover:text-brand-400 transition-colors">Email</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
