@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affrina A - ATS Resume | Data Science</title>
+    <meta name="description" content="ATS-Optimized Resume of Affrina A - B.Sc. Data Science student at Kumaraguru Institutions.">
+    <!-- Tailwind CDN for Web View -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #1a202c;
+            background-color: #f8fafc;
+        }
+
+        /* ATS Optimized Print Stylesheet */
+        @media print {
+            @page {
+                margin: 15mm;
+                size: A4 portrait;
+            }
+            header, footer, .no-print {
+                display: none !important;
+            }
+            body {
+                background: #ffffff !important;
+                color: #000000 !important;
+                font-size: 10.5pt !important;
+                line-height: 1.35 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .resume-sheet {
+                box-shadow: none !important;
+                border: none !important;
+                padding: 0 !important;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+            a {
+                color: #000000 !important;
+                text-decoration: none !important;
+            }
+            .section-title {
+                border-bottom: 1.5pt solid #222222 !important;
+                color: #000000 !important;
+            }
+        }
+    </style>
+</head>
+<body class="py-8 px-4 sm:px-6">
+
+    <!-- Top Action Bar (Screen Only) -->
+    <div class="no-print max-w-4xl mx-auto mb-6 flex flex-wrap items-center justify-between gap-4 bg-slate-900 text-white px-6 py-4 rounded-2xl shadow-xl">
+        <div class="flex items-center gap-3">
+            <a href="index.html" class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="ph ph-arrow-left"></i>
+                Portfolio Home
+            </a>
+            <span class="text-xs text-slate-400">ATS-Friendly Clean Format</span>
+        </div>
+        <div class="flex items-center gap-3">
+            <button onclick="window.print()" class="px-4 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold shadow-md flex items-center gap-2 transition-all">
+                <i class="ph ph-printer text-base"></i>
+                Print / Save to PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- The Resume Sheet -->
+    <main class="resume-sheet max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-xl shadow-sm border border-slate-200 text-slate-900">
+
+        <!-- Header: Name & Contact Information -->
+        <header class="text-center pb-6 border-b border-slate-300">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 uppercase mb-2">Affrina A</h1>
+            <p class="text-base font-semibold text-slate-700 mb-3">Aspiring Data Scientist · B.Sc. Data Science Scholar</p>
+            
+            <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-1 text-xs text-slate-600 font-medium">
+                <span>📍 Coimbatore, Tamil Nadu, India</span>
+                <span>•</span>
+                <a href="mailto:affrina700@gmail.com" class="hover:text-orange-600">✉️ affrina700@gmail.com</a>
+                <span>•</span>
+                <a href="https://github.com/affrina700-eng" target="_blank" class="hover:text-orange-600">🔗 github.com/affrina700-eng</a>
+                <span>•</span>
+                <a href="https://affrina700-eng.github.io" target="_blank" class="hover:text-orange-600">🌐 affrina700-eng.github.io</a>
+            </div>
+        </header>
+
+        <!-- Section: Professional Summary -->
+        <section class="mt-6">
+            <h2 class="section-title text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-1 mb-2.5">
+                Professional Summary
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-800 leading-relaxed text-justify">
+                Motivated and analytical 2nd-year undergraduate student pursuing a <strong>Bachelor of Science in Data Science at Kumaraguru Institutions</strong>. Possesses a solid academic and practical grounding in <strong>Python, SQL, Power BI, Machine Learning, and Data Visualization</strong>. Adept at statistical data exploration, designing intuitive business intelligence dashboards, and building predictive models on structured datasets. Eager to leverage technical rigor and analytical thinking in Data Science internships and collaborative projects.
+            </p>
+        </section>
+
+        <!-- Section: Education -->
+        <section class="mt-6">
+            <h2 class="section-title text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-1 mb-2.5">
+                Education
+            </h2>
+            <div class="space-y-2">
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between">
+                    <div>
+                        <strong class="text-sm font-bold text-slate-900">Bachelor of Science (B.Sc.) in Data Science</strong>
+                        <div class="text-xs font-semibold text-slate-700">Kumaraguru Institutions, Coimbatore</div>
+                    </div>
+                    <div class="text-xs font-medium text-slate-600 sm:text-right mt-1 sm:mt-0">
+                        2024 – 2027 (Currently in 2nd Year)
+                    </div>
+                </div>
+                <p class="text-xs text-slate-700">
+                    <strong>Core Coursework:</strong> Applied Statistics & Probability, Relational Database Management Systems (RDBMS), Machine Learning Foundations, Data Structures & Algorithms, Exploratory Data Analysis, Data Visualization.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section: Technical Skills -->
+        <section class="mt-6">
+            <h2 class="section-title text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-1 mb-2.5">
+                Technical Skills
+            </h2>
+            <div class="grid grid-cols-1 gap-2 text-xs sm:text-sm text-slate-800">
+                <div>
+                    <strong class="font-bold text-slate-900">Programming & Scripting:</strong> Python (Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn), SQL
+                </div>
+                <div>
+                    <strong class="font-bold text-slate-900">Data Analytics & Visualization:</strong> Power BI (Interactive Dashboards, KPI Reporting), Data Storytelling, Exploratory Data Analysis (EDA)
+                </div>
+                <div>
+                    <strong class="font-bold text-slate-900">Machine Learning & Modeling:</strong> Supervised Learning, Regression Models, Classification Pipelines, Feature Engineering, Model Evaluation Metrics
+                </div>
+                <div>
+                    <strong class="font-bold text-slate-900">Database & Tools:</strong> SQL Queries & Joins, Database Schema Design, Git, GitHub, Jupyter Notebook, VS Code
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Academic & Practical Projects -->
+        <section class="mt-6">
+            <h2 class="section-title text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-1 mb-2.5">
+                Academic & Practical Project Work
+            </h2>
+            <div class="space-y-4">
+                
+                <!-- Project 1 -->
+                <div>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                        <strong class="text-xs sm:text-sm font-bold text-slate-900">Interactive Business Intelligence & Performance Dashboard</strong>
+                        <span class="text-xs font-medium text-slate-600">Power BI | Data Modeling</span>
+                    </div>
+                    <ul class="list-disc list-outside ml-5 text-xs text-slate-800 space-y-1">
+                        <li>Developed a multi-page interactive dashboard in Power BI to analyze multi-metric datasets with customized drill-throughs and trend visualizations.</li>
+                        <li>Modeled dataset relationships and configured key performance indicator (KPI) cards to enable intuitive decision-making.</li>
+                        <li>Utilized conditional formatting and dynamic filters to surface actionable patterns across categorical dimensions.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 -->
+                <div>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                        <strong class="text-xs sm:text-sm font-bold text-slate-900">Predictive Modeling & Statistical Exploratory Data Analysis (EDA)</strong>
+                        <span class="text-xs font-medium text-slate-600">Python | Scikit-Learn | Pandas</span>
+                    </div>
+                    <ul class="list-disc list-outside ml-5 text-xs text-slate-800 space-y-1">
+                        <li>Conducted thorough exploratory data analysis on structured datasets, identifying correlations, skewness, and outliers using Matplotlib and Seaborn.</li>
+                        <li>Implemented data preprocessing pipelines including categorical encoding, missing value imputation, and feature scaling.</li>
+                        <li>Trained and benchmarked supervised machine learning classifiers, evaluating performance using Accuracy, Precision, Recall, and F1-Scores.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 3 -->
+                <div>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
+                        <strong class="text-xs sm:text-sm font-bold text-slate-900">Relational Database Design & Analytical Query Optimization</strong>
+                        <span class="text-xs font-medium text-slate-600">SQL | DBMS</span>
+                    </div>
+                    <ul class="list-disc list-outside ml-5 text-xs text-slate-800 space-y-1">
+                        <li>Formulated normalized database tables and established primary/foreign key constraints to ensure relational data integrity.</li>
+                        <li>Authored complex SQL queries utilizing multiple table JOINs, subqueries, group by aggregations, and window functions to retrieve analytical reports.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section: Core Competencies & Soft Skills -->
+        <section class="mt-6">
+            <h2 class="section-title text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-1 mb-2.5">
+                Core Strengths & Competencies
+            </h2>
+            <div class="text-xs sm:text-sm text-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div>• Analytical Thinking & Problem Structuring</div>
+                <div>• Visual Data Storytelling & Presentation</div>
+                <div>• Collaborative Teamwork & Communication</div>
+                <div>• Proactive & Continuous Self-Directed Learning</div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
