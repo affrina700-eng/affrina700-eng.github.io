@@ -1,650 +1,1319 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affrina A | PROTOSEM - 20-Week Innovation Programme</title>
-    <meta name="description" content="Affrina A - Innovation Engineer Trainee at PRICE ProtoSem. 20-week industry-integrated innovation programme archive.">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Phosphor Icons CDN -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        mono: ['"JetBrains Mono"', 'monospace'],
-                    },
-                    colors: {
-                        brand: {
-                            400: '#fb923c',
-                            500: '#f97316',
-                            600: '#ea580c',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Tech Grid & Matrix Backgrounds */
-        .tech-grid {
-            background-size: 36px 36px;
-            background-image: 
-                linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-            mask-image: radial-gradient(ellipse 90% 75% at 50% 30%, black 40%, transparent 95%);
-            -webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 30%, black 40%, transparent 95%);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Journey Beyond the Classroom | B.Sc. Data Science Portfolio</title>
+  <meta name="description" content="Personal portfolio and interactive resume of a 2nd-year B.Sc. Data Science student. Exploring real experiences, departmental leadership, certifications, and academic projects beyond the classroom.">
+  <meta name="keywords" content="Data Science, Portfolio, Student Portfolio, Power BI, Excel, AGMARKNET, Data Analysis, Visualization, ProtoSem">
+  <meta name="author" content="B.Sc. Data Science Student">
 
-        .dot-matrix {
-            background-image: radial-gradient(rgba(249, 115, 22, 0.18) 1.2px, transparent 1.2px);
-            background-size: 28px 28px;
-            mask-image: radial-gradient(ellipse 70% 60% at 50% 25%, black 20%, transparent 80%);
-            -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 25%, black 20%, transparent 80%);
-        }
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="My Journey Beyond the Classroom | B.Sc. Data Science Portfolio">
+  <meta property="og:description" content="Explore my first 1.5 years of growth, departmental leadership, workshops, certifications, and data projects.">
+  <meta property="og:type" content="website">
 
-        /* Ambient Fluid Aurora Animations */
-        @keyframes orb-float-1 {
-            0%, 100% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(60px, -50px) scale(1.12); }
-            66% { transform: translate(-40px, 35px) scale(0.92); }
-        }
-        @keyframes orb-float-2 {
-            0%, 100% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(-55px, 45px) scale(1.08); }
-            66% { transform: translate(45px, -35px) scale(0.95); }
-        }
-        @keyframes orb-float-3 {
-            0%, 100% { transform: translate(0px, 0px) scale(1); }
-            50% { transform: translate(50px, -40px) scale(1.15); }
-        }
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        .orb-1 {
-            animation: orb-float-1 20s ease-in-out infinite alternate;
-        }
-        .orb-2 {
-            animation: orb-float-2 26s ease-in-out infinite alternate;
-        }
-        .orb-3 {
-            animation: orb-float-3 22s ease-in-out infinite alternate;
-        }
-
-        /* Interactive Cursor Spotlight */
-        #cursor-spotlight {
-            background: radial-gradient(650px circle at var(--mouse-x, 50%) var(--mouse-y, 30%), rgba(249, 115, 22, 0.085), transparent 75%);
-        }
-
-        /* Card Glassmorphic Aesthetics */
-        .week-card {
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-        }
-        .week-card:hover {
-            transform: translateY(-3px);
-            border-color: rgba(249, 115, 22, 0.65);
-            background: rgba(30, 41, 59, 0.85);
-            box-shadow: 0 14px 30px -6px rgba(249, 115, 22, 0.22), 0 0 0 1px rgba(249, 115, 22, 0.2);
-        }
-        .week-card:hover .week-arrow {
-            transform: translateX(4px);
-            color: #fb923c;
-        }
-        .phase-tab.active {
-            background: #f97316;
-            color: #ffffff;
-            border-color: #fb923c;
-            box-shadow: 0 4px 15px -2px rgba(249, 115, 22, 0.4);
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .orb-1, .orb-2, .orb-3 {
-                animation: none !important;
-            }
-        }
-    </style>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white relative overflow-x-hidden min-h-screen flex flex-col justify-between">
+<body>
 
-    <!-- ENHANCED AMBIENT BACKGROUND LAYERS -->
-    <div id="ambient-layer" class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <!-- Fluid Aurora Glow Orbs -->
-        <div class="orb-1 absolute top-[-10%] left-[-10%] w-[650px] h-[650px] rounded-full bg-gradient-to-br from-orange-600/20 via-amber-500/15 to-transparent blur-3xl"></div>
-        <div class="orb-2 absolute top-[15%] right-[-10%] w-[600px] h-[600px] rounded-full bg-gradient-to-bl from-indigo-600/15 via-purple-600/10 to-transparent blur-3xl"></div>
-        <div class="orb-3 absolute bottom-[-12%] left-[15%] w-[700px] h-[700px] rounded-full bg-gradient-to-tr from-rose-600/15 via-orange-600/10 to-transparent blur-3xl"></div>
-        <div class="orb-2 absolute top-[55%] right-[10%] w-[500px] h-[500px] rounded-full bg-amber-500/10 blur-3xl"></div>
+  <!-- Background Particle Network Canvas -->
+  <canvas id="particle-canvas"></canvas>
 
-        <!-- Tech Matrix Grid & Dot Matrix -->
-        <div class="absolute inset-0 tech-grid"></div>
-        <div class="absolute inset-0 dot-matrix opacity-70"></div>
+  <!-- Interactive Cursor Spotlight Overlay -->
+  <div class="spotlight-overlay"></div>
 
-        <!-- Dynamic Mouse Spotlight -->
-        <div id="cursor-spotlight" class="absolute inset-0"></div>
+  <div class="app-container">
 
-        <!-- High-Performance Interactive Neural/Constellation Canvas -->
-        <canvas id="neural-canvas" class="absolute inset-0 w-full h-full"></canvas>
-    </div>
+    <!-- ======================================================================
+         NAVIGATION BAR
+         ====================================================================== -->
+    <header class="navbar" id="navbar">
+      <div class="container navbar-inner">
+        <a href="#hero" class="nav-brand" id="nav-brand-logo">
+          <div class="brand-icon">DS</div>
+          <div class="brand-meta">
+            <span class="brand-title">Journey Beyond</span>
+            <span class="brand-sub">B.Sc. Data Science</span>
+          </div>
+        </a>
 
-    <!-- 1. TOP PROTOSEM ANNOUNCEMENT BAR -->
-    <div class="relative z-50 bg-gradient-to-r from-orange-600 via-brand-500 to-rose-600 text-white text-xs font-semibold py-2.5 px-4 shadow-md text-center flex items-center justify-center gap-2">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/25 text-white font-mono text-[11px] font-bold tracking-wider">
-            <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-            PROTOSEM
-        </span>
-        <span class="font-medium">PRICE ProtoSem: 20-Week Industry-Integrated Innovation Programme</span>
-    </div>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#experiences" class="nav-link">Experiences</a></li>
+          <li><a href="#timeline" class="nav-link">Timeline</a></li>
+          <li><a href="#project" class="nav-link">Featured Project</a></li>
+          <li><a href="#current-journey" class="nav-link">Current Journey</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#growth-story" class="nav-link">Growth Story</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+        </ul>
 
-    <!-- 2. MAIN HEADER -->
-    <header class="sticky top-0 z-40 backdrop-blur-md bg-slate-950/90 border-b border-slate-800">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center text-white font-extrabold text-base shadow-md shadow-brand-500/25">
-                    A
-                </div>
-                <div>
-                    <span class="font-bold text-white block tracking-tight text-sm">Affrina A</span>
-                    <span class="text-[11px] text-brand-400 font-mono block font-semibold">PRICE PROTOSEM</span>
-                </div>
-            </div>
-            
-            <div class="flex items-center gap-3">
-                <a href="#protosem" class="px-3.5 py-1.5 rounded-xl bg-brand-500/10 border border-brand-500/30 text-brand-300 hover:text-white hover:bg-brand-500/20 text-xs font-bold transition-all flex items-center gap-1.5">
-                    <i class="ph ph-sparkle"></i>
-                    <span>ProtoSem</span>
-                </a>
-                <a href="resume.html" target="_blank" class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-all">
-                    <i class="ph ph-file-text text-brand-400 text-sm"></i>
-                    <span>ATS Resume</span>
-                </a>
-                <a href="mailto:affrina700@gmail.com" class="px-3.5 py-1.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold shadow-md shadow-brand-500/20 transition-all flex items-center gap-1.5">
-                    <i class="ph ph-envelope text-sm"></i>
-                    <span>Contact</span>
-                </a>
-            </div>
+        <div class="nav-actions">
+          <!-- Audio Toggle -->
+          <button class="icon-btn" id="sound-toggle-btn" title="Toggle UI Sound Effects" aria-label="Toggle Sound">
+            <span id="sound-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+            </span>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button class="icon-btn" id="theme-toggle-btn" title="Switch Theme" aria-label="Toggle Theme">
+            <span id="theme-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            </span>
+          </button>
+
+          <a href="#resume" class="btn btn-primary btn-sm" id="nav-resume-cta">
+            <span>Resume</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </a>
+
+          <!-- Mobile Hamburger -->
+          <button class="icon-btn mobile-nav-toggle" id="mobile-toggle" aria-label="Open Navigation Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
         </div>
+      </div>
     </header>
 
-    <!-- 3. UNCLUTTERED MAIN CONTENT: DEDICATED PROTOSEM EXPERIENCE -->
-    <main class="relative z-10 max-w-5xl mx-auto px-6 py-10 space-y-10 w-full flex-1">
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#experiences" class="nav-link">My Experiences</a>
+      <a href="#timeline" class="nav-link">Achievement Timeline</a>
+      <a href="#project" class="nav-link">Featured Project</a>
+      <a href="#current-journey" class="nav-link">Current Journey</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#growth-story" class="nav-link">Growth Story</a>
+      <a href="#resume" class="nav-link">Resume</a>
+    </div>
 
-        <!-- PROTOSEM HERO & PROGRAMME CARD -->
-        <section id="protosem" class="bg-gradient-to-b from-slate-900/90 to-slate-900/50 border border-brand-500/30 rounded-3xl p-6 sm:p-10 backdrop-blur-md space-y-6 relative overflow-hidden">
-            <div class="absolute -top-16 -right-16 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- ======================================================================
+         SECTION 1: HERO SECTION
+         ====================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-live-pill">
+            <span class="pulse-dot"></span>
+            <span>2nd-Year B.Sc. Data Science &bull; 1.5 Years in Motion</span>
+          </div>
 
-            <!-- Section Label & Role -->
-            <div class="flex flex-wrap items-center justify-between gap-3">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-500/15 border border-brand-500/30 text-brand-300 text-xs font-mono font-bold tracking-widest uppercase">
-                    <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
-                    PROTOSEM
+          <h1 class="hero-title">
+            My Journey <br>
+            <span class="text-gradient">Beyond the Classroom</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            B.Sc. Data Science Student | Exploring, Participating and Building
+          </p>
+
+          <p class="hero-intro">
+            This portfolio represents my journey beyond regular classroom learning. Through departmental events, workshops, certifications and projects, I have explored opportunities to learn, participate, organize and grow.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#experiences" class="btn btn-primary" id="hero-explore-btn">
+              <span>Explore My Experiences</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#project" class="btn btn-secondary" id="hero-project-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              <span>Featured Project</span>
+            </a>
+            <a href="#resume" class="btn btn-outline-cyan" id="hero-resume-btn">
+              <span>View Resume</span>
+            </a>
+          </div>
+
+          <!-- Hero Real Stats -->
+          <div class="hero-stats-bar">
+            <div class="stat-item">
+              <span class="stat-number text-cyan">1.5 Yrs</span>
+              <span class="stat-label">Active Growth</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number text-violet">7</span>
+              <span class="stat-label">Real Milestones</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number text-emerald">1</span>
+              <span class="stat-label">Gov Data Project</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number text-amber">100%</span>
+              <span class="stat-label">Authentic Story</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Mockup -->
+        <div class="hero-visual-col">
+          <div class="hero-visual-card">
+            <div class="visual-top-bar">
+              <div class="terminal-dots">
+                <span class="t-dot t-red"></span>
+                <span class="t-dot t-yellow"></span>
+                <span class="t-dot t-green"></span>
+              </div>
+              <span class="visual-title">growth_pipeline.py — Live Story</span>
+            </div>
+
+            <div class="data-mesh-view">
+              <div class="flow-step-pill">
+                <div class="flow-left">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <span>Data Hunt Leadership</span>
                 </div>
-                <div class="px-3.5 py-1 rounded-full bg-slate-800/90 border border-slate-700 text-slate-300 text-xs font-medium">
-                    Role: <strong class="text-white font-semibold">Innovation Engineer Trainee</strong>
+                <span class="flow-tag">Organized</span>
+              </div>
+
+              <div class="flow-step-pill">
+                <div class="flow-left">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  <span>Power BI 1-Week Workshop</span>
                 </div>
-            </div>
+                <span class="flow-tag">Learned</span>
+              </div>
 
-            <!-- Main Heading & Descriptor -->
-            <div class="space-y-2">
-                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                    PRICE ProtoSem
-                </h1>
-                <p class="text-brand-400 font-mono text-sm sm:text-base font-semibold">
-                    20-Week Industry-Integrated Innovation Programme
-                </p>
-            </div>
-
-            <!-- Official Descriptions (Verbatim) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-slate-800/80 pt-6">
-                <p>
-                    Selected for a 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.
-                </p>
-                <p>
-                    Working with industry problem statements to explore, develop, and validate practical technology solutions beyond conventional classroom learning.
-                </p>
-            </div>
-
-            <!-- Programme Disciplines -->
-            <div class="pt-2 space-y-3">
-                <div class="text-[11px] font-mono uppercase tracking-wider text-slate-400">Programme Disciplines & Focus Areas:</div>
-                <div class="flex flex-wrap gap-2.5">
-                    <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/80 border border-slate-700/80 text-slate-200 text-xs font-medium">
-                        <i class="ph ph-storefront text-base text-brand-400"></i>
-                        Phygital Retail & Intelligent Commerce
-                    </span>
-                    <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/80 border border-slate-700/80 text-slate-200 text-xs font-medium">
-                        <i class="ph ph-cpu text-base text-rose-400"></i>
-                        AI & Analytics
-                    </span>
-                    <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/80 border border-slate-700/80 text-slate-200 text-xs font-medium">
-                        <i class="ph ph-plugs-connected text-base text-amber-400"></i>
-                        Intelligent Systems & IoT
-                    </span>
-                    <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/80 border border-slate-700/80 text-slate-200 text-xs font-medium">
-                        <i class="ph ph-wrench text-base text-orange-400"></i>
-                        Prototyping
-                    </span>
-                    <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-800/80 border border-slate-700/80 text-slate-200 text-xs font-medium">
-                        <i class="ph ph-rocket-launch text-base text-pink-400"></i>
-                        Entrepreneurship
-                    </span>
+              <div class="flow-step-pill">
+                <div class="flow-left">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><circle cx="12" cy="14" r="2"></circle></svg>
+                  <span>Excel Simplilearn Certificate</span>
                 </div>
-            </div>
-        </section>
+                <span class="flow-tag">Certified</span>
+              </div>
 
-        <!-- 4. 20-WEEK PROGRESSION BAR -->
-        <section class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono">
-            <div class="flex items-center gap-2 text-brand-400 font-bold tracking-wider">
-                <i class="ph ph-path text-lg"></i>
-                <span>20-WEEK PROGRAMME PROGRESSION</span>
-            </div>
-            <div class="flex items-center gap-2 text-slate-400 text-xs">
-                <span class="text-brand-300 font-bold">01</span>
-                <span>━━━━</span>
-                <span>05</span>
-                <span>━━━━</span>
-                <span>10</span>
-                <span>━━━━</span>
-                <span>15</span>
-                <span>━━━━</span>
-                <span>20</span>
-            </div>
-        </section>
-
-        <!-- 5. THE 20-WEEK JOURNEY & PHASE NAVIGATION -->
-        <section class="space-y-6">
-            
-            <!-- Phase Navigation Header -->
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div>
-                    <h2 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight">The 20-Week Journey</h2>
-                    <p class="text-xs text-slate-400">One Programme · Four Phases · Twenty Weekly Chapters</p>
+              <div class="flow-step-pill">
+                <div class="flow-left">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                  <span>AGMARKNET Price Analysis</span>
                 </div>
+                <span class="flow-tag">Academic Project</span>
+              </div>
 
-                <!-- Phase Filter Tabs -->
-                <div class="inline-flex flex-wrap p-1 rounded-xl bg-slate-900 border border-slate-800 gap-1" role="tablist">
-                    <button onclick="filterPhase('all')" id="tab-all" class="phase-tab active px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-all">
-                        All (20 Weeks)
-                    </button>
-                    <button onclick="filterPhase('phase-1')" id="tab-phase-1" class="phase-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-all">
-                        Phase 01 (01–05)
-                    </button>
-                    <button onclick="filterPhase('phase-2')" id="tab-phase-2" class="phase-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-all">
-                        Phase 02 (06–10)
-                    </button>
-                    <button onclick="filterPhase('phase-3')" id="tab-phase-3" class="phase-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-all">
-                        Phase 03 (11–15)
-                    </button>
-                    <button onclick="filterPhase('phase-4')" id="tab-phase-4" class="phase-tab px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white transition-all">
-                        Phase 04 (16–20)
-                    </button>
+              <div class="flow-step-pill">
+                <div class="flow-left">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  <span>Exploring ProtoSem</span>
                 </div>
+                <span class="flow-tag">Current Journey</span>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <!-- Dynamic 20-Week Cards Grid -->
-            <div id="protosem-weeks-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- Javascript will inject data-driven cards -->
-            </div>
+    <!-- ======================================================================
+         SECTION 2: MY EXPERIENCES
+         ====================================================================== -->
+    <section id="experiences">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>Real Activities & Upskilling</span>
+          </div>
+          <h2 class="section-title">My Experiences</h2>
+          <p class="section-desc">
+            Tangible departmental events, practical workshops, certifications, and interdisciplinary courses completed during my first 1.5 years in college.
+          </p>
+        </div>
 
-        </section>
+        <!-- Filter Tabs -->
+        <div class="filter-tabs-wrapper">
+          <button class="filter-tab active" data-category="all">All Experiences (7)</button>
+          <button class="filter-tab" data-category="leadership">Department & Leadership</button>
+          <button class="filter-tab" data-category="upskilling">Workshops & Certifications</button>
+          <button class="filter-tab" data-category="interdisciplinary">Interdisciplinary & Growth</button>
+        </div>
 
-    </main>
+        <div class="experiences-grid">
 
-    <!-- Modal Dialog for Weekly Chapter Clicks -->
-    <dialog id="protosem-modal" class="backdrop:bg-slate-950/80 backdrop:backdrop-blur-sm bg-slate-900 border border-brand-500/40 rounded-3xl p-6 text-slate-100 max-w-sm w-[90%] shadow-2xl m-auto">
-        <div class="space-y-4 text-center">
-            <div class="w-12 h-12 rounded-2xl bg-brand-500/15 border border-brand-500/30 text-brand-400 mx-auto flex items-center justify-center text-2xl">
-                <i class="ph ph-journal-bookmark"></i>
-            </div>
-            <div class="space-y-1">
-                <div id="modal-phase" class="text-xs font-mono text-brand-400 font-bold uppercase tracking-wider">Phase 01</div>
-                <h3 id="modal-week" class="text-2xl font-extrabold text-white">WEEK 01</h3>
-                <div class="inline-flex px-3 py-0.5 rounded-full bg-slate-800 text-amber-300 text-xs font-mono border border-slate-700">
-                    FIELD NOTES IN PROGRESS
+          <!-- 1. DATAGENICS -->
+          <div class="exp-card-wrap" data-category="leadership">
+            <div class="glass-card exp-card">
+              <div class="exp-header">
+                <div class="exp-icon-wrap exp-icon-cyan">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                 </div>
+                <span class="exp-badge">Participated</span>
+              </div>
+              <h3 class="exp-title">DATAGENICS</h3>
+              <div class="exp-category-sub">Departmental Event</div>
+              <p class="exp-desc">
+                Participated in the Datagenics event and gained exposure to the Data Science community and departmental activities.
+              </p>
+              <div class="exp-footer">
+                <span class="mono-tag">Community Exposure</span>
+                <span class="exp-learn-more" data-exp="datagenics">
+                  Details <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
             </div>
-            <p class="text-slate-300 text-xs leading-relaxed">
-                The technical deep-dive and weekly learnings for this chapter will be published here as part of the 20-week programme archive.
+          </div>
+
+          <!-- 2. DATA HUNT (HIGHLIGHT) -->
+          <div class="exp-card-wrap" data-category="leadership">
+            <div class="glass-card exp-card" style="border-color: rgba(0, 242, 254, 0.4);">
+              <div class="exp-header">
+                <div class="exp-icon-wrap exp-icon-violet">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                </div>
+                <span class="exp-badge" style="background: rgba(139, 92, 246, 0.2); color: var(--accent-violet);">Organized & Conducted</span>
+              </div>
+              <h3 class="exp-title">DATA HUNT</h3>
+              <div class="exp-category-sub">Departmental Activity Leadership</div>
+              <p class="exp-desc">
+                Conducted Data Hunt as a departmental activity, managing participant flow, technical checkpoints, and event execution.
+              </p>
+              <div class="exp-highlights">
+                <div class="exp-highlights-title">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  <span>Key Competencies Highlighted:</span>
+                </div>
+                <div class="exp-pill-list">
+                  <span class="exp-pill">Event Coordination</span>
+                  <span class="exp-pill">Organization</span>
+                  <span class="exp-pill">Teamwork</span>
+                  <span class="exp-pill">Communication</span>
+                  <span class="exp-pill">Responsibility</span>
+                </div>
+              </div>
+              <div class="exp-footer">
+                <span class="mono-tag">Leadership Role</span>
+                <span class="exp-learn-more" data-exp="data-hunt">
+                  Details <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. DATA CONCLAVE -->
+          <div class="exp-card-wrap" data-category="leadership">
+            <div class="glass-card exp-card">
+              <div class="exp-header">
+                <div class="exp-icon-wrap exp-icon-cyan">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </div>
+                <span class="exp-badge">Participated</span>
+              </div>
+              <h3 class="exp-title">DATA CONCLAVE</h3>
+              <div class="exp-category-sub">Departmental Forum</div>
+              <p class="exp-desc">
+                Participated and contributed to activities related to Data Conclave, connecting with academic peers and emerging data discussions.
+              </p>
+              <div class="exp-footer">
+                <span class="mono-tag">Departmental Contribution</span>
+                <span class="exp-learn-more" data-exp="data-conclave">
+                  Details <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. POWER BI WORKSHOP (MAJOR LEARNING) -->
+          <div class="exp-card-wrap" data-category="upskilling">
+            <div class="glass-card exp-card" style="border-color: rgba(16, 185, 129, 0.35);">
+              <div class="exp-header">
+                <div class="exp-icon-wrap exp-icon-emerald">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </div>
+                <span class="exp-badge" style="background: rgba(16, 185, 129, 0.2); color: var(--accent-emerald);">Major Learning Experience</span>
+              </div>
+              <h3 class="exp-title">POWER BI WORKSHOP</h3>
+              <div class="exp-category-sub">1-Week Intensive Workshop</div>
+              <p class="exp-desc">
+                Attended a one-week workshop focused on Power BI and data visualization. Served as a transformative foundation in building interactive analytical dashboards.
+              </p>
+              <div class="exp-highlights">
+                <div class="exp-highlights-title">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Focus Areas:</span>
+                </div>
+                <div class="exp-pill-list">
+                  <span class="exp-pill">Data Visualization</span>
+                  <span class="exp-pill">Interactive Dashboards</span>
+                  <span class="exp-pill">Visual Storytelling</span>
+                </div>
+              </div>
+              <div class="exp-footer">
+                <span class="mono-tag">Hands-on Tooling</span>
+                <span class="exp-learn-more" data-exp="power-bi">
+                  Details <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. MICROSOFT EXCEL CERTIFICATION -->
+          <div class="exp-card-wrap" data-category="upskilling">
+            <div class="glass-card exp-card">
+              <div class="exp-header">
+                <div class="exp-icon-wrap exp-icon-amber">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                </div>
+                <span class="exp-badge">Certified</span>
+              </div>
+              <h3 class="exp-title">MICROSOFT EXCEL CERTIFICATION</h3>
+              <div class="exp-category-sub">Online Course via Simplilearn</div>
+              <p class="exp-desc">
+                Completed an online Microsoft Excel course through Simplilearn and received a verified completion certificate.
+              </p>
+              <div class="exp-footer">
+                <span class="mono-tag">Simplilearn Certificate</span>
+                <span class="exp-learn-more" data-exp="excel-cert">
+                  Details <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. FINANCE LIBERAL ARTS COURSE -->
+          <div class="exp-card-wrap" data-category="interdisciplinary">
+            <div class="glass-card exp-card">
+              <div class="exp-header">
+                <div class="exp-icon-wrap exp-icon-violet">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <span class="exp-badge">Liberal Arts Course</span>
+              </div>
+              <h3 class="exp-title">FINANCE LIBERAL ARTS</h3>
+              <div class="exp-category-sub">1-Week Interdisciplinary Course</div>
+              <p class="exp-desc">
+                Completed a one-week Liberal Arts course focused on Finance, broadening domain understanding and quantitative perspective beyond technical curricula.
+              </p>
+              <div class="exp-footer">
+                <span class="mono-tag">Interdisciplinary</span>
+                <span class="exp-learn-more" data-exp="finance-course">
+                  Details <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. OUTBOUND PROGRAMME -->
+          <div class="exp-card-wrap" data-category="interdisciplinary">
+            <div class="glass-card exp-card">
+              <div class="exp-header">
+                <div class="exp-icon-wrap exp-icon-cyan">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg>
+                </div>
+                <span class="exp-badge">Certified</span>
+              </div>
+              <h3 class="exp-title">OUTBOUND PROGRAMME</h3>
+              <div class="exp-category-sub">Experiential Learning & Team Building</div>
+              <p class="exp-desc">
+                Participated in an outbound programme and received a certificate of completion, building team resilience and collaborative agility.
+              </p>
+              <div class="exp-footer">
+                <span class="mono-tag">Team Building Certificate</span>
+                <span class="exp-learn-more" data-exp="outbound">
+                  Details <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 3: ACHIEVEMENT TIMELINE
+         ====================================================================== -->
+    <section id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <span>Interactive Growth Path</span>
+          </div>
+          <h2 class="section-title">1.5 Years of Experiences and Growth</h2>
+          <p class="section-desc">
+            A progressive step-by-step interactive timeline capturing the progression of my college journey from initial participation to active leadership and continuous learning.
+          </p>
+        </div>
+
+        <!-- Timeline Stage Stepper Flow -->
+        <div class="timeline-stepper">
+          <button class="timeline-step-btn active" data-phase="all" title="View All Stages">
+            <div class="step-node">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle></svg>
+            </div>
+            <span class="step-label">ALL</span>
+          </button>
+
+          <button class="timeline-step-btn" data-phase="participated" title="Participated Stage">
+            <div class="step-node">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+            </div>
+            <span class="step-label">PARTICIPATED</span>
+          </button>
+
+          <button class="timeline-step-btn" data-phase="learned" title="Learned Stage">
+            <div class="step-node">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            </div>
+            <span class="step-label">LEARNED</span>
+          </button>
+
+          <button class="timeline-step-btn" data-phase="organized" title="Organized Stage">
+            <div class="step-node">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <span class="step-label">ORGANIZED</span>
+          </button>
+
+          <button class="timeline-step-btn" data-phase="explored" title="Explored Stage">
+            <div class="step-node">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+            </div>
+            <span class="step-label">EXPLORED</span>
+          </button>
+
+          <button class="timeline-step-btn" data-phase="built" title="Built Stage">
+            <div class="step-node">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <span class="step-label">BUILT</span>
+          </button>
+
+          <button class="timeline-step-btn" data-phase="growing" title="Growing Stage">
+            <div class="step-node">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+            </div>
+            <span class="step-label">GROWING</span>
+          </button>
+        </div>
+
+        <!-- Vertical Timeline Stream -->
+        <div class="timeline-track-container">
+          <div class="timeline-beam"></div>
+
+          <!-- Step 1: Participated - Datagenics & Data Conclave -->
+          <div class="timeline-event-card" data-phases="participated">
+            <div class="timeline-bullet">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="glass-card timeline-card-content">
+              <div class="timeline-meta-bar">
+                <span class="timeline-phase-tag">Stage 1 &bull; PARTICIPATED</span>
+                <span class="mono-tag text-muted">First Steps</span>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Datagenics & Data Conclave</h3>
+              <p>
+                Began stepping outside conventional lecture boundaries by actively attending departmental events. Connected with the student Data Science community and gained invaluable initial exposure to collaborative academic forums.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2: Learned - Power BI Workshop & Excel Simplilearn -->
+          <div class="timeline-event-card" data-phases="learned">
+            <div class="timeline-bullet">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <div class="glass-card timeline-card-content">
+              <div class="timeline-meta-bar">
+                <span class="timeline-phase-tag" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">Stage 2 &bull; LEARNED</span>
+                <span class="mono-tag text-muted">Skill Acquisition</span>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Power BI 1-Week Workshop & Excel Simplilearn Certification</h3>
+              <p>
+                Invested dedicated time into applied tooling mastery. Completed an intensive one-week Power BI workshop to build visual analytics capabilities, paired with online Microsoft Excel certification via Simplilearn.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3: Organized - Data Hunt -->
+          <div class="timeline-event-card" data-phases="organized">
+            <div class="timeline-bullet" style="border-color: var(--accent-violet);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="glass-card timeline-card-content">
+              <div class="timeline-meta-bar">
+                <span class="timeline-phase-tag" style="background: rgba(139, 92, 246, 0.15); color: var(--accent-violet);">Stage 3 &bull; ORGANIZED</span>
+                <span class="mono-tag text-muted">Leadership & Coordination</span>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Conducted Data Hunt Departmental Activity</h3>
+              <p>
+                Transitioned from attendee to organizer by conducting the departmental Data Hunt. Fostered teamwork, coordinated activity rules, handled real-time communication, and took end-to-end responsibility for successful event delivery.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4: Explored - Finance Liberal Arts & Outbound Programme -->
+          <div class="timeline-event-card" data-phases="explored">
+            <div class="timeline-bullet">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+            </div>
+            <div class="glass-card timeline-card-content">
+              <div class="timeline-meta-bar">
+                <span class="timeline-phase-tag" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-amber);">Stage 4 &bull; EXPLORED</span>
+                <span class="mono-tag text-muted">Interdisciplinary Immersion</span>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Finance Liberal Arts Course & Outbound Programme</h3>
+              <p>
+                Broadened horizons through cross-disciplinary learning in Finance, followed by participating in an experiential Outbound Programme with earned certification, strengthening collaborative agility and perspective.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 5: Built - AGMARKNET Project & Portfolio Development -->
+          <div class="timeline-event-card" data-phases="built">
+            <div class="timeline-bullet" style="border-color: var(--accent-cyan);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <div class="glass-card timeline-card-content">
+              <div class="timeline-meta-bar">
+                <span class="timeline-phase-tag" style="background: rgba(0, 242, 254, 0.15); color: var(--accent-cyan);">Stage 5 &bull; BUILT</span>
+                <span class="mono-tag text-muted">Practical Application</span>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">AGMARKNET Agricultural Price Analysis Project</h3>
+              <p>
+                Applied data cleaning, exploratory data analysis, and forecasting principles to real Indian government market data. Built structured analytical workflows and documented commodity price behavior.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 6: Growing - ProtoSem Exploration & Continuous Journey -->
+          <div class="timeline-event-card" data-phases="growing">
+            <div class="timeline-bullet" style="border-color: var(--accent-emerald);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+            </div>
+            <div class="glass-card timeline-card-content">
+              <div class="timeline-meta-bar">
+                <span class="timeline-phase-tag" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">Stage 6 &bull; GROWING</span>
+                <span class="mono-tag text-muted">Current Trajectory</span>
+              </div>
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Exploring ProtoSem, GitHub & Real-World Projects</h3>
+              <p>
+                Actively expanding practical horizons through ProtoSem exploration, version control on GitHub, and hands-on experimentation with real-world data science challenges.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 4: FEATURED PROJECT
+         ====================================================================== -->
+    <section id="project">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            <span>Academic Data Science Project</span>
+          </div>
+          <h2 class="section-title">Featured Project</h2>
+          <p class="section-desc">
+            Hands-on analysis of authentic public agricultural market data from the Government of India.
+          </p>
+        </div>
+
+        <div class="project-featured-container">
+          <div class="project-header-block">
+            <div class="project-category-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              <span>Academic Data Science Project &bull; Government AGMARKNET Portal</span>
+            </div>
+
+            <h3 class="project-main-title">
+              Agricultural Commodity Price Analysis and Forecasting Using AGMARKNET Government Data
+            </h3>
+
+            <p class="project-main-desc">
+              An academic Data Science project focused on analysing agricultural commodity market data, identifying patterns, comparing prices and exploring forecasting techniques.
             </p>
-            <button onclick="document.getElementById('protosem-modal').close()" class="w-full py-2.5 rounded-xl bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs shadow transition-all">
-                Close
-            </button>
-        </div>
-    </dialog>
+          </div>
 
-    <!-- Clean Minimal Footer -->
-    <footer class="relative z-10 border-t border-slate-800/80 bg-slate-950 py-6 text-center text-xs text-slate-500 mt-12">
-        <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p>© 2026 Affrina A · B.Sc. Data Science, Kumaraguru Institutions & PRICE ProtoSem</p>
-            <div class="flex items-center gap-4 text-slate-400">
-                <a href="https://github.com/affrina700-eng" target="_blank" class="hover:text-brand-400 transition-colors">GitHub</a>
-                <span>•</span>
-                <a href="resume.html" target="_blank" class="hover:text-brand-400 transition-colors">ATS Resume</a>
-                <span>•</span>
-                <a href="mailto:affrina700@gmail.com" class="hover:text-brand-400 transition-colors">affrina700@gmail.com</a>
+          <!-- 7-Step Interactive Pipeline Flow -->
+          <div class="pipeline-section">
+            <div class="pipeline-heading">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <span>End-to-End Project Workflow (Click Steps to Inspect)</span>
             </div>
+
+            <div class="pipeline-flow-wrapper">
+              <div class="pipeline-step active" data-step="gov-data">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                <span>Government Data</span>
+              </div>
+
+              <div class="pipeline-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+
+              <div class="pipeline-step" data-step="collection">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Data Collection</span>
+              </div>
+
+              <div class="pipeline-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+
+              <div class="pipeline-step" data-step="cleaning">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                <span>Data Cleaning</span>
+              </div>
+
+              <div class="pipeline-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+
+              <div class="pipeline-step" data-step="analysis">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                <span>Data Analysis</span>
+              </div>
+
+              <div class="pipeline-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+
+              <div class="pipeline-step" data-step="visualization">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                <span>Visualization</span>
+              </div>
+
+              <div class="pipeline-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+
+              <div class="pipeline-step" data-step="pattern">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>Pattern Identification</span>
+              </div>
+
+              <div class="pipeline-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></div>
+
+              <div class="pipeline-step" data-step="forecasting">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                <span>Forecasting</span>
+              </div>
+            </div>
+
+            <!-- Pipeline Dynamic Card -->
+            <div class="pipeline-detail-card">
+              <div class="pipeline-detail-info">
+                <h4 id="pipeline-detail-title">1. Government Data (AGMARKNET)</h4>
+                <p id="pipeline-detail-desc">
+                  Extracted public market data from the Directorate of Marketing & Inspection (DMI), Ministry of Agriculture and Farmers Welfare (AGMARKNET portal), focusing on daily arrivals and wholesale commodity market prices.
+                </p>
+              </div>
+              <div class="pipeline-tech-box">
+                <span class="mono-tag text-muted" style="margin-bottom: 0.35rem;">Tools & Implementation</span>
+                <span id="pipeline-detail-tech" style="font-size: 0.88rem; color: var(--text-primary); font-weight: 500;">
+                  AGMARKNET Public Portal, Raw CSV/JSON extraction, Market mandi records
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Chart Visualizer -->
+          <div class="project-chart-explorer">
+            <div class="chart-controls-bar">
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Interactive Commodity Price Trend & Forecasting Simulation</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Simulated time-series modal prices (₹/Quintal) & baseline projection cone</p>
+              </div>
+              <div class="commodity-selectors">
+                <button class="commodity-btn active" data-commodity="onion">Onion Mandi Price</button>
+                <button class="commodity-btn" data-commodity="tomato">Tomato Mandi Price</button>
+                <button class="commodity-btn" data-commodity="wheat">Wheat Mandi Price</button>
+              </div>
+            </div>
+
+            <div class="chart-canvas-wrapper">
+              <canvas id="agmarknet-chart-canvas"></canvas>
+              <div class="chart-legend">
+                <div class="legend-item">
+                  <span class="legend-color" style="background: var(--accent-cyan);"></span>
+                  <span>Historical Mandi Modal Price</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-color" style="background: var(--accent-violet);"></span>
+                  <span>Baseline Forecast Path</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-color" style="background: rgba(139, 92, 246, 0.3);"></span>
+                  <span>Confidence Interval Band</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 5: CURRENT JOURNEY
+         ====================================================================== -->
+    <section id="current-journey">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <span>Active Progress</span>
+          </div>
+          <h2 class="section-title">Still Building My Story</h2>
+          <p class="section-desc">
+            Continuous growth in motion. How I am actively spending my time expanding my practical skills and data science perspective.
+          </p>
+        </div>
+
+        <!-- ProtoSem Highlight Banner (Framed as learning & professional journey, NOT an achievement) -->
+        <div class="protosem-highlight-banner">
+          <div class="journey-card-icon" style="background: rgba(99, 102, 241, 0.18); color: var(--accent-indigo);">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          </div>
+          <div style="flex-grow: 1;">
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.35rem;">
+              <h3 style="font-size: 1.25rem;">Currently Exploring ProtoSem</h3>
+              <span class="journey-status-pill">Active Learning Track</span>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-secondary);">
+              Engaging with the ProtoSem innovation and applied engineering framework to explore real-world problem-solving, rapid prototyping, and industry-aligned practices as part of my ongoing learning and professional journey.
+            </p>
+          </div>
+        </div>
+
+        <div class="current-journey-grid">
+
+          <!-- 1. Building Personal Projects -->
+          <div class="glass-card journey-card">
+            <div class="journey-card-header">
+              <div class="journey-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h4 style="font-size: 1.1rem;">Building Personal Projects</h4>
+              <span class="journey-status-pill">Ongoing</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+              Creating hands-on projects to apply theoretical data fundamentals to practical challenges, datasets, and domain scenarios.
+            </p>
+          </div>
+
+          <!-- 2. Developing Personal Portfolio -->
+          <div class="glass-card journey-card">
+            <div class="journey-card-header">
+              <div class="journey-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              </div>
+              <h4 style="font-size: 1.1rem;">Developing My Portfolio</h4>
+              <span class="journey-status-pill">Active</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+              Designing and maintaining this interactive space to document my genuine 1.5-year trajectory, learnings, and projects.
+            </p>
+          </div>
+
+          <!-- 3. Exploring GitHub -->
+          <div class="glass-card journey-card">
+            <div class="journey-card-header">
+              <div class="journey-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </div>
+              <h4 style="font-size: 1.1rem;">Exploring GitHub</h4>
+              <span class="journey-status-pill">Learning</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+              Adopting version control workflows, creating repositories, and understanding collaborative development best practices.
+            </p>
+          </div>
+
+          <!-- 4. Exploring Data Analysis & Visualization -->
+          <div class="glass-card journey-card">
+            <div class="journey-card-header">
+              <div class="journey-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+              </div>
+              <h4 style="font-size: 1.1rem;">Data Analysis & Viz</h4>
+              <span class="journey-status-pill">Deepening</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+              Deepening visualization methods, color balance, and clear dashboard narrative structures for complex data stories.
+            </p>
+          </div>
+
+          <!-- 5. Real-World Data Science Projects -->
+          <div class="glass-card journey-card">
+            <div class="journey-card-header">
+              <div class="journey-card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+              </div>
+              <h4 style="font-size: 1.1rem;">Real-World DS Projects</h4>
+              <span class="journey-status-pill">Exploring</span>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+              Exploring new open-source datasets (agriculture, environmental, market records) to practice end-to-end analytical problem solving.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 6: SKILLS SECTION
+         ====================================================================== -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <span>Core Competencies</span>
+          </div>
+          <h2 class="section-title">Skills & Capabilities</h2>
+          <p class="section-desc">
+            Gained through practical workshops, certified courses, departmental leadership, and real-world project workflows.
+          </p>
+        </div>
+
+        <div class="skills-container-grid">
+
+          <!-- 1. Technical Tools -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon" style="background: linear-gradient(135deg, #00f2fe, #0284c7);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <div>
+                <h3 style="font-size: 1.2rem;">Technical Tools</h3>
+                <span class="mono-tag text-muted">Applied Toolset</span>
+              </div>
+            </div>
+
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-name-row">
+                  <span class="skill-name">Power BI</span>
+                  <span class="skill-context-badge">1-Week Workshop</span>
+                </div>
+                <p class="skill-application-note">Interactive analytical dashboards, multi-chart reports, and business data visualization.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-name-row">
+                  <span class="skill-name">Microsoft Excel</span>
+                  <span class="skill-context-badge">Simplilearn Certified</span>
+                </div>
+                <p class="skill-application-note">Data manipulation, structured lookup functions, formulas, and tabular dataset formatting.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-name-row">
+                  <span class="skill-name">GitHub</span>
+                  <span class="skill-context-badge">Current Exploration</span>
+                </div>
+                <p class="skill-application-note">Version control, repository management, branch tracking, and project code documentation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Data Skills -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <div>
+                <h3 style="font-size: 1.2rem;">Data Skills</h3>
+                <span class="mono-tag text-muted">Analytical Foundations</span>
+              </div>
+            </div>
+
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-name-row">
+                  <span class="skill-name">Data Analysis</span>
+                  <span class="skill-context-badge">AGMARKNET Project</span>
+                </div>
+                <p class="skill-application-note">Descriptive analysis, modal price evaluation, and spread comparison across mandis.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-name-row">
+                  <span class="skill-name">Data Visualization</span>
+                  <span class="skill-context-badge">Workshops & Projects</span>
+                </div>
+                <p class="skill-application-note">Time-series plots, seasonality charts, moving average overlays, and visual communication.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-name-row">
+                  <span class="skill-name">Exploratory Data Analysis</span>
+                  <span class="skill-context-badge">EDA Methods</span>
+                </div>
+                <p class="skill-application-note">Missing value handling, outlier detection, data sanity checking, and schema transformation.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-name-row">
+                  <span class="skill-name">Forecasting Fundamentals</span>
+                  <span class="skill-context-badge">Time-Series Project</span>
+                </div>
+                <p class="skill-application-note">Historical trend extrapolations, moving average baselines, and prediction intervals.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Professional Skills -->
+          <div class="glass-card skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <div>
+                <h3 style="font-size: 1.2rem;">Professional Skills</h3>
+                <span class="mono-tag text-muted">Leadership & Teamwork</span>
+              </div>
+            </div>
+
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-name-row">
+                  <span class="skill-name">Event Coordination</span>
+                  <span class="skill-context-badge">Data Hunt Leadership</span>
+                </div>
+                <p class="skill-application-note">Planning timelines, delegating responsibilities, and ensuring smooth participant logistics.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-name-row">
+                  <span class="skill-name">Teamwork & Communication</span>
+                  <span class="skill-context-badge">Outbound & Conclave</span>
+                </div>
+                <p class="skill-application-note">Collaborating with cross-functional peers, clear verbal sharing, and interpersonal synergy.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-name-row">
+                  <span class="skill-name">Problem Solving & Analytical Thinking</span>
+                  <span class="skill-context-badge">Projects & Events</span>
+                </div>
+                <p class="skill-application-note">Breaking ambiguous questions down into structured steps and driving methodical solutions.</p>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-name-row">
+                  <span class="skill-name">Presentation</span>
+                  <span class="skill-context-badge">Academic Showcases</span>
+                </div>
+                <p class="skill-application-note">Articulating analytical findings and data project pipelines with clarity and structure.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 7: GROWTH STORY
+         ====================================================================== -->
+    <section id="growth-story">
+      <div class="container">
+        <div class="growth-story-wrapper">
+          <div class="section-badge" style="margin-bottom: 1.5rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            <span>Personal Narrative</span>
+          </div>
+
+          <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">
+            More Than a List of Achievements
+          </h2>
+
+          <p class="growth-lead-text">
+            "My journey is not defined only by awards or competitions. During my first one and a half years, I have stepped beyond regular classroom learning by participating in departmental events, conducting activities, completing certifications, attending workshops and exploring real-world projects. Every experience has helped me grow, learn and build confidence for the journey ahead."
+          </p>
+
+          <div class="growth-story-pillars">
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <div class="pillar-title">Courage to Participate</div>
+              <div class="pillar-desc">Stepping up into new communities, discussions, and forums.</div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              </div>
+              <div class="pillar-title">Curiosity to Learn</div>
+              <div class="pillar-desc">Upskilling through Power BI workshops, Excel, and Finance courses.</div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <div class="pillar-title">Willingness to Lead</div>
+              <div class="pillar-desc">Taking responsibility and conducting the departmental Data Hunt.</div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <div class="pillar-title">Confidence to Build</div>
+              <div class="pillar-desc">Applying methods to real AGMARKNET government market data.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 8: RESUME SECTION
+         ====================================================================== -->
+    <section id="resume">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <span>Professional Profile</span>
+          </div>
+          <h2 class="section-title">Resume & Profile</h2>
+          <p class="section-desc">
+            A structured, professional overview of my real experiences, certifications, and skills.
+          </p>
+        </div>
+
+        <div class="resume-card-container">
+          <!-- Resume Top Controls -->
+          <div class="resume-top-actions">
+            <div>
+              <h3 style="font-size: 1.5rem; margin-bottom: 0.25rem;">B.Sc. Data Science Student</h3>
+              <p style="font-size: 0.9rem; color: var(--accent-cyan); font-family: var(--font-mono);">Second-Year Undergraduate &bull; 1.5 Years in College</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <button class="btn btn-outline-cyan btn-sm" id="copy-resume-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copy Summary</span>
+              </button>
+              <button class="btn btn-primary btn-sm" id="print-resume-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+                <span>Print / Save PDF</span>
+              </button>
+              <a href="resume.html" target="_blank" class="btn btn-secondary btn-sm" title="Open Standalone ATS Resume">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>Standalone Doc</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Professional Summary Box -->
+          <div class="resume-summary-box">
+            <h4>Professional Summary</h4>
+            <p>
+              "I am a B.Sc. Data Science student with a growing interest in data analysis and data visualization. Beyond my regular academic curriculum, I have participated in departmental events, conducted a Data Hunt activity, attended a one-week Power BI workshop, completed certifications and explored interdisciplinary learning through a Finance Liberal Arts course. I am currently building projects and continuing to develop my skills through practical experiences."
+            </p>
+          </div>
+
+          <!-- Resume 2-Column Structured Content -->
+          <div class="resume-sections-grid">
+            <!-- Left Column: Experiences & Activities -->
+            <div>
+              <h4 class="resume-block-title">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                <span>Departmental Activities & Leadership</span>
+              </h4>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">Conducted "Data Hunt" Activity</span>
+                  <span class="resume-entry-date">Departmental</span>
+                </div>
+                <div class="resume-entry-sub">Lead Organizer & Coordinator</div>
+                <p class="resume-entry-desc">
+                  Took responsibility for designing and conducting the departmental Data Hunt. Demonstrated event coordination, teamwork, prompt communication, and real-time problem-solving.
+                </p>
+              </div>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">Datagenics & Data Conclave</span>
+                  <span class="resume-entry-date">Departmental</span>
+                </div>
+                <div class="resume-entry-sub">Active Participant & Contributor</div>
+                <p class="resume-entry-desc">
+                  Participated in Datagenics gaining community exposure; contributed actively to events and sessions related to Data Conclave.
+                </p>
+              </div>
+
+              <h4 class="resume-block-title" style="margin-top: 2rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                <span>Featured Academic Project</span>
+              </h4>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">Agricultural Commodity Price Analysis & Forecasting</span>
+                  <span class="resume-entry-date">Academic</span>
+                </div>
+                <div class="resume-entry-sub">AGMARKNET Public Government Data</div>
+                <p class="resume-entry-desc">
+                  Executed an end-to-end data pipeline: Government Data extraction ➔ Collection ➔ Cleaning ➔ Statistical Analysis ➔ Visualization ➔ Pattern Identification ➔ Forecasting fundamentals.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right Column: Workshops, Certifications & Skills -->
+            <div>
+              <h4 class="resume-block-title">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><circle cx="12" cy="14" r="2"></circle></svg>
+                <span>Workshops & Certifications</span>
+              </h4>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">Power BI & Data Visualization Workshop</span>
+                  <span class="resume-entry-date">1-Week Intensive</span>
+                </div>
+                <div class="resume-entry-sub">Practical Tooling & Visual Storytelling</div>
+                <p class="resume-entry-desc">
+                  Mastered interactive dashboard construction, visual hierarchy, and analytical metrics representation.
+                </p>
+              </div>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">Microsoft Excel Course Certificate</span>
+                  <span class="resume-entry-date">Simplilearn</span>
+                </div>
+                <div class="resume-entry-sub">Online Verified Certificate</div>
+                <p class="resume-entry-desc">
+                  Formulas, data formatting, lookup tables, and structured data handling.
+                </p>
+              </div>
+
+              <div class="resume-entry">
+                <div class="resume-entry-header">
+                  <span class="resume-entry-title">Finance Liberal Arts & Outbound Programme</span>
+                  <span class="resume-entry-date">Certificates Earned</span>
+                </div>
+                <div class="resume-entry-sub">Interdisciplinary & Experiential Learning</div>
+                <p class="resume-entry-desc">
+                  Completed a 1-week Finance course and an experiential outdoor team-building programme.
+                </p>
+              </div>
+
+              <h4 class="resume-block-title" style="margin-top: 2rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <span>Skills Summary</span>
+              </h4>
+
+              <div class="exp-pill-list" style="margin-top: 0.5rem;">
+                <span class="exp-pill">Power BI</span>
+                <span class="exp-pill">Microsoft Excel</span>
+                <span class="exp-pill">GitHub</span>
+                <span class="exp-pill">Data Analysis</span>
+                <span class="exp-pill">Data Visualization</span>
+                <span class="exp-pill">Exploratory Data Analysis</span>
+                <span class="exp-pill">Forecasting Fundamentals</span>
+                <span class="exp-pill">Event Coordination</span>
+                <span class="exp-pill">Teamwork</span>
+                <span class="exp-pill">Communication</span>
+                <span class="exp-pill">Problem Solving</span>
+                <span class="exp-pill">Analytical Thinking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION 9: FINAL SECTION & INSPIRING QUOTE
+         ====================================================================== -->
+    <section id="final">
+      <div class="container">
+        <div class="final-quote-container">
+          <div class="section-badge" style="margin-bottom: 1.5rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <span>The Horizon Ahead</span>
+          </div>
+
+          <h2 class="final-quote-title">
+            "My Journey Has Only Just Begun."
+          </h2>
+
+          <p class="final-quote-text">
+            "Growth is not always measured by trophies. Sometimes, it is measured by the courage to participate, learn, lead and keep moving forward."
+          </p>
+
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="#hero" class="btn btn-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+              <span>Back to Top</span>
+            </a>
+            <a href="resume.html" target="_blank" class="btn btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              <span>Open ATS Resume</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FOOTER
+         ====================================================================== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <span style="font-weight: 700; font-size: 0.95rem;">My Journey Beyond the Classroom</span>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem;">
+            2nd-Year B.Sc. Data Science Student Portfolio &bull; 1.5 Years of Authentic Growth
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#experiences" class="footer-link">Experiences</a>
+          <a href="#timeline" class="footer-link">Timeline</a>
+          <a href="#project" class="footer-link">AGMARKNET Project</a>
+          <a href="#skills" class="footer-link">Skills</a>
+          <a href="#resume" class="footer-link">Resume</a>
+        </div>
+      </div>
     </footer>
 
-    <!-- PROTOSEM DATA ARCHITECTURE -->
-    <script>
-        const protoSemWeeks = [
-            { week: 1, phase: 1, phaseLabel: "PHASE 01", status: "COMING SOON" },
-            { week: 2, phase: 1, phaseLabel: "PHASE 01", status: "COMING SOON" },
-            { week: 3, phase: 1, phaseLabel: "PHASE 01", status: "COMING SOON" },
-            { week: 4, phase: 1, phaseLabel: "PHASE 01", status: "COMING SOON" },
-            { week: 5, phase: 1, phaseLabel: "PHASE 01", status: "COMING SOON" },
-            { week: 6, phase: 2, phaseLabel: "PHASE 02", status: "COMING SOON" },
-            { week: 7, phase: 2, phaseLabel: "PHASE 02", status: "COMING SOON" },
-            { week: 8, phase: 2, phaseLabel: "PHASE 02", status: "COMING SOON" },
-            { week: 9, phase: 2, phaseLabel: "PHASE 02", status: "COMING SOON" },
-            { week: 10, phase: 2, phaseLabel: "PHASE 02", status: "COMING SOON" },
-            { week: 11, phase: 3, phaseLabel: "PHASE 03", status: "COMING SOON" },
-            { week: 12, phase: 3, phaseLabel: "PHASE 03", status: "COMING SOON" },
-            { week: 13, phase: 3, phaseLabel: "PHASE 03", status: "COMING SOON" },
-            { week: 14, phase: 3, phaseLabel: "PHASE 03", status: "COMING SOON" },
-            { week: 15, phase: 3, phaseLabel: "PHASE 03", status: "COMING SOON" },
-            { week: 16, phase: 4, phaseLabel: "PHASE 04", status: "COMING SOON" },
-            { week: 17, phase: 4, phaseLabel: "PHASE 04", status: "COMING SOON" },
-            { week: 18, phase: 4, phaseLabel: "PHASE 04", status: "COMING SOON" },
-            { week: 19, phase: 4, phaseLabel: "PHASE 04", status: "COMING SOON" },
-            { week: 20, phase: 4, phaseLabel: "PHASE 04", status: "COMING SOON" }
-        ];
+  </div>
 
-        function renderWeekCards(filter = 'all') {
-            const container = document.getElementById('protosem-weeks-container');
-            container.innerHTML = '';
+  <!-- ======================================================================
+       EXPERIENCE DETAIL MODAL DIALOG
+       ====================================================================== -->
+  <div class="modal-backdrop" id="experience-modal">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
 
-            const filteredWeeks = filter === 'all' 
-                ? protoSemWeeks 
-                : protoSemWeeks.filter(w => `phase-${w.phase}` === filter);
+      <div style="margin-bottom: 1.25rem;">
+        <span class="exp-badge" id="modal-badge">Participation</span>
+        <h3 id="modal-title" style="font-size: 1.6rem; margin-top: 0.75rem;">Experience Title</h3>
+        <span id="modal-subtitle" style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-cyan);">Experience Subtitle</span>
+      </div>
 
-            filteredWeeks.forEach(item => {
-                const weekNumPadded = item.week < 10 ? `0${item.week}` : `${item.week}`;
-                
-                const card = document.createElement('div');
-                card.className = `week-card group relative p-4 rounded-2xl bg-slate-900/75 border border-slate-800 flex flex-col justify-between gap-3 cursor-pointer select-none`;
-                card.onclick = () => openWeekModal(item);
+      <p id="modal-summary" style="font-size: 1rem; color: var(--text-primary); margin-bottom: 1.5rem; line-height: 1.7;">
+        Summary description...
+      </p>
 
-                card.innerHTML = `
-                    <div class="space-y-2">
-                        <div class="flex items-center justify-between">
-                            <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-semibold flex items-center gap-1.5">
-                                <span class="w-1.5 h-1.5 rounded-full ${item.phase === 1 ? 'bg-orange-400' : item.phase === 2 ? 'bg-amber-400' : item.phase === 3 ? 'bg-rose-400' : 'bg-pink-400'}"></span>
-                                ${item.phaseLabel}
-                            </span>
-                            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-800 text-brand-300 border border-slate-700">
-                                W${weekNumPadded}
-                            </span>
-                        </div>
-                        
-                        <div>
-                            <div class="text-xl font-bold text-white group-hover:text-brand-300 transition-colors">
-                                WEEK ${weekNumPadded}
-                            </div>
-                            <div class="text-[10px] font-mono text-slate-400 mt-0.5 flex items-center gap-1">
-                                <i class="ph ph-hourglass-simple text-brand-400"></i>
-                                <span>${item.status}</span>
-                            </div>
-                        </div>
-                    </div>
+      <div style="background: var(--bg-tertiary); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+        <h4 style="font-size: 0.85rem; font-family: var(--font-mono); text-transform: uppercase; color: var(--accent-violet); margin-bottom: 0.75rem;">
+          Key Takeaways & Reflections:
+        </h4>
+        <ul id="modal-takeaways" style="list-style: none; padding: 0;">
+          <!-- Populated by JS -->
+        </ul>
+      </div>
+    </div>
+  </div>
 
-                    <div class="pt-2.5 border-t border-slate-800/70 flex items-center justify-between text-[10px] font-mono text-slate-500 group-hover:text-slate-300">
-                        <span>FIELD NOTES IN PROGRESS</span>
-                        <div class="week-arrow text-brand-400 transition-transform">
-                            <i class="ph ph-arrow-right text-xs"></i>
-                        </div>
-                    </div>
-                `;
-
-                container.appendChild(card);
-            });
-        }
-
-        function filterPhase(phaseKey) {
-            document.querySelectorAll('.phase-tab').forEach(tab => tab.classList.remove('active'));
-            const activeTab = document.getElementById(`tab-${phaseKey}`);
-            if (activeTab) activeTab.classList.add('active');
-            renderWeekCards(phaseKey);
-        }
-
-        function openWeekModal(item) {
-            const weekNumPadded = item.week < 10 ? `0${item.week}` : `${item.week}`;
-            document.getElementById('modal-phase').innerText = `${item.phaseLabel} · WEEK ${weekNumPadded}`;
-            document.getElementById('modal-week').innerText = `WEEK ${weekNumPadded}`;
-            document.getElementById('protosem-modal').showModal();
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            renderWeekCards('all');
-            initNeuralBackground();
-        });
-
-        /* ==========================================================
-           HIGH-PERFORMANCE INTERACTIVE NEURAL CONSTELLATION ENGINE
-           ========================================================== */
-        function initNeuralBackground() {
-            const canvas = document.getElementById('neural-canvas');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            if (!ctx) return;
-
-            let width = 0;
-            let height = 0;
-            let dpr = window.devicePixelRatio || 1;
-            let animationFrameId = null;
-            let isTabActive = true;
-
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-            const mouse = {
-                x: -1000,
-                y: -1000,
-                radius: 160,
-                active: false
-            };
-
-            // Palette of data-science / innovation glowing nodes
-            const nodeColors = [
-                'rgba(249, 115, 22, ',   // Brand Orange
-                'rgba(251, 191, 36, ',   // Tech Amber
-                'rgba(244, 63, 94, ',    // Rose Coral
-                'rgba(167, 139, 250, ',  // Violet
-                'rgba(226, 232, 240, '   // Soft Ice/White
-            ];
-
-            let particles = [];
-
-            function resize() {
-                width = window.innerWidth;
-                height = window.innerHeight;
-                dpr = window.devicePixelRatio || 1;
-
-                canvas.width = Math.floor(width * dpr);
-                canvas.height = Math.floor(height * dpr);
-                canvas.style.width = width + 'px';
-                canvas.style.height = height + 'px';
-                ctx.scale(dpr, dpr);
-
-                createParticles();
-            }
-
-            function createParticles() {
-                particles = [];
-                // Responsive particle density
-                const count = width < 768 ? 32 : Math.min(65, Math.floor((width * height) / 22000));
-
-                for (let i = 0; i < count; i++) {
-                    const colorBase = nodeColors[Math.floor(Math.random() * nodeColors.length)];
-                    particles.push({
-                        x: Math.random() * width,
-                        y: Math.random() * height,
-                        vx: (Math.random() - 0.5) * (prefersReducedMotion ? 0.05 : 0.45),
-                        vy: (Math.random() - 0.5) * (prefersReducedMotion ? 0.05 : 0.45),
-                        baseRadius: Math.random() * 1.5 + 1.0,
-                        pulseSpeed: Math.random() * 0.02 + 0.01,
-                        pulseAngle: Math.random() * Math.PI * 2,
-                        colorBase: colorBase,
-                        baseAlpha: Math.random() * 0.4 + 0.3
-                    });
-                }
-            }
-
-            // Mouse tracking & spotlight effect
-            window.addEventListener('mousemove', (e) => {
-                mouse.x = e.clientX;
-                mouse.y = e.clientY;
-                mouse.active = true;
-
-                // Update CSS variables for smooth background spotlight
-                document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
-                document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
-            }, { passive: true });
-
-            window.addEventListener('mouseleave', () => {
-                mouse.active = false;
-                mouse.x = -1000;
-                mouse.y = -1000;
-            });
-
-            // Touch support for mobile interaction
-            window.addEventListener('touchmove', (e) => {
-                if (e.touches.length > 0) {
-                    mouse.x = e.touches[0].clientX;
-                    mouse.y = e.touches[0].clientY;
-                    mouse.active = true;
-                    document.documentElement.style.setProperty('--mouse-x', `${mouse.x}px`);
-                    document.documentElement.style.setProperty('--mouse-y', `${mouse.y}px`);
-                }
-            }, { passive: true });
-
-            window.addEventListener('touchend', () => {
-                mouse.active = false;
-            });
-
-            let resizeTimer;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(resize, 150);
-            });
-
-            document.addEventListener('visibilitychange', () => {
-                isTabActive = !document.hidden;
-                if (isTabActive && !animationFrameId) {
-                    animate();
-                }
-            });
-
-            const maxDistance = 120;
-            const maxDistSq = maxDistance * maxDistance;
-            const mouseRadiusSq = mouse.radius * mouse.radius;
-
-            function animate() {
-                if (!isTabActive) {
-                    animationFrameId = null;
-                    return;
-                }
-
-                ctx.clearRect(0, 0, width, height);
-
-                const len = particles.length;
-
-                // 1. Update and draw nodes
-                for (let i = 0; i < len; i++) {
-                    const p = particles[i];
-
-                    // Movement
-                    p.x += p.vx;
-                    p.y += p.vy;
-
-                    // Bounce on screen bounds
-                    if (p.x < 0) { p.x = 0; p.vx *= -1; }
-                    else if (p.x > width) { p.x = width; p.vx *= -1; }
-                    if (p.y < 0) { p.y = 0; p.vy *= -1; }
-                    else if (p.y > height) { p.y = height; p.vy *= -1; }
-
-                    // Mouse interaction (subtle magnetic steer)
-                    if (mouse.active) {
-                        const dx = mouse.x - p.x;
-                        const dy = mouse.y - p.y;
-                        const distSq = dx * dx + dy * dy;
-
-                        if (distSq < mouseRadiusSq && distSq > 4) {
-                            const dist = Math.sqrt(distSq);
-                            const force = (1 - dist / mouse.radius) * 0.02;
-                            p.vx += (dx / dist) * force;
-                            p.vy += (dy / dist) * force;
-                        }
-                    }
-
-                    // Pulse size and alpha
-                    p.pulseAngle += p.pulseSpeed;
-                    const currentAlpha = p.baseAlpha + Math.sin(p.pulseAngle) * 0.15;
-                    const currentRadius = p.baseRadius + Math.sin(p.pulseAngle) * 0.3;
-
-                    // Draw Node
-                    ctx.beginPath();
-                    ctx.arc(p.x, p.y, Math.max(0.5, currentRadius), 0, Math.PI * 2);
-                    ctx.fillStyle = `${p.colorBase}${Math.max(0.1, currentAlpha)})`;
-                    ctx.shadowColor = 'rgba(249, 115, 22, 0.4)';
-                    ctx.shadowBlur = 4;
-                    ctx.fill();
-                    ctx.shadowBlur = 0;
-                }
-
-                // 2. Draw connections between nearby nodes
-                ctx.lineWidth = 0.8;
-                for (let i = 0; i < len; i++) {
-                    const p1 = particles[i];
-                    for (let j = i + 1; j < len; j++) {
-                        const p2 = particles[j];
-                        const dx = p1.x - p2.x;
-                        const dy = p1.y - p2.y;
-                        const distSq = dx * dx + dy * dy;
-
-                        if (distSq < maxDistSq) {
-                            const dist = Math.sqrt(distSq);
-                            const alpha = (1 - dist / maxDistance) * 0.18;
-                            ctx.beginPath();
-                            ctx.moveTo(p1.x, p1.y);
-                            ctx.lineTo(p2.x, p2.y);
-                            ctx.strokeStyle = `rgba(249, 115, 22, ${alpha})`;
-                            ctx.stroke();
-                        }
-                    }
-
-                    // Connect to active mouse
-                    if (mouse.active) {
-                        const mdx = p1.x - mouse.x;
-                        const mdy = p1.y - mouse.y;
-                        const mdistSq = mdx * mdx + mdy * mdy;
-
-                        if (mdistSq < mouseRadiusSq) {
-                            const mdist = Math.sqrt(mdistSq);
-                            const malpha = (1 - mdist / mouse.radius) * 0.38;
-                            ctx.beginPath();
-                            ctx.moveTo(p1.x, p1.y);
-                            ctx.lineTo(mouse.x, mouse.y);
-                            ctx.strokeStyle = `rgba(251, 146, 60, ${malpha})`;
-                            ctx.lineWidth = 1;
-                            ctx.stroke();
-                            ctx.lineWidth = 0.8;
-                        }
-                    }
-                }
-
-                animationFrameId = requestAnimationFrame(animate);
-            }
-
-            resize();
-            animate();
-        }
-    </script>
-
+  <!-- Application Script -->
+  <script src="app.js"></script>
 </body>
 </html>
