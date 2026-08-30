@@ -1,229 +1,482 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Affrina A - ATS Resume | Data Science & Innovation</title>
-    <meta name="description" content="ATS-Optimized Resume of Affrina A - B.Sc. Data Science student at Kumaraguru Institutions and Innovation Engineer Trainee at PRICE ProtoSem.">
-    <!-- Tailwind CDN for Web View -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <style>
-        body {
-            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            color: #1a202c;
-            background-color: #f8fafc;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Second-Year B.Sc. Data Science Student</title>
+  <meta name="description" content="Professional Resume of a 2nd-Year B.Sc. Data Science student. Focused on real departmental activities, workshops, certifications, and data projects beyond the classroom.">
 
-        /* ATS Optimized Print Stylesheet */
-        @media print {
-            @page {
-                margin: 12mm 15mm;
-                size: A4 portrait;
-            }
-            header, footer, .no-print {
-                display: none !important;
-            }
-            body {
-                background: #ffffff !important;
-                color: #000000 !important;
-                font-size: 10pt !important;
-                line-height: 1.3 !important;
-                padding: 0 !important;
-                margin: 0 !important;
-            }
-            .resume-sheet {
-                box-shadow: none !important;
-                border: none !important;
-                padding: 0 !important;
-                max-width: 100% !important;
-                width: 100% !important;
-            }
-            a {
-                color: #000000 !important;
-                text-decoration: none !important;
-            }
-            .section-title {
-                border-bottom: 1.5pt solid #222222 !important;
-                color: #000000 !important;
-            }
-        }
-    </style>
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #334155;
+      --accent: #0284c7;
+      --accent-dark: #0369a1;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--primary);
+      line-height: 1.6;
+      padding: 2.5rem 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .resume-wrapper {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      padding: 3rem;
+    }
+
+    /* Action Toolbar (Hidden in Print) */
+    .toolbar {
+      max-width: 850px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1.15rem;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: var(--secondary);
+      border-color: var(--border);
+    }
+
+    .btn-outline:hover {
+      background: var(--bg);
+      border-color: var(--muted);
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .name-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+
+    .sub-title {
+      font-size: 1.05rem;
+      color: var(--accent);
+      font-weight: 600;
+      font-family: var(--font-mono);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-family: var(--font-mono);
+    }
+
+    /* Section Styles */
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.05rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Summary Box */
+    .summary-text {
+      font-size: 0.95rem;
+      color: var(--secondary);
+      line-height: 1.7;
+    }
+
+    /* Entry Item */
+    .entry {
+      margin-bottom: 1.25rem;
+    }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.2rem;
+    }
+
+    .entry-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .entry-date {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .entry-sub {
+      font-size: 0.88rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+
+    .entry-desc {
+      font-size: 0.9rem;
+      color: var(--secondary);
+      line-height: 1.55;
+    }
+
+    ul.bullet-list {
+      list-style-type: square;
+      padding-left: 1.2rem;
+      font-size: 0.9rem;
+      color: var(--secondary);
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 650px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skill-block h4 {
+      font-size: 0.85rem;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      padding: 0.2rem 0.5rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--secondary);
+      font-weight: 500;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+        font-size: 10pt;
+      }
+
+      .toolbar {
+        display: none !important;
+      }
+
+      .resume-wrapper {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+
+      .section {
+        margin-bottom: 1.25rem;
+      }
+
+      .name-title {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
-<body class="py-8 px-4 sm:px-6">
+<body>
 
-    <!-- Top Action Bar (Screen Only) -->
-    <div class="no-print max-w-4xl mx-auto mb-6 flex flex-wrap items-center justify-between gap-4 bg-slate-900 text-white px-6 py-4 rounded-2xl shadow-xl">
-        <div class="flex items-center gap-3">
-            <a href="index.html" class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-1.5 transition-all">
-                <i class="ph ph-arrow-left"></i>
-                Portfolio Home
-            </a>
-            <span class="text-xs text-slate-400">ATS-Friendly Clean Format</span>
-        </div>
-        <div class="flex items-center gap-3">
-            <button onclick="window.print()" class="px-4 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold shadow-md flex items-center gap-2 transition-all">
-                <i class="ph ph-printer text-base"></i>
-                Print / Save to PDF
-            </button>
-        </div>
+  <!-- Top Action Toolbar -->
+  <div class="toolbar">
+    <a href="index.html" class="btn btn-outline">
+      &larr; Back to Interactive Portfolio
+    </a>
+    <div style="display: flex; gap: 0.5rem;">
+      <button onclick="window.print()" class="btn btn-primary">
+        Print / Save PDF
+      </button>
     </div>
+  </div>
 
-    <!-- The Resume Sheet -->
-    <main class="resume-sheet max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-xl shadow-sm border border-slate-200 text-slate-900">
+  <!-- ATS Clean Printable Resume Document -->
+  <main class="resume-wrapper">
 
-        <!-- Header: Name & Contact Information -->
-        <header class="text-center pb-5 border-b border-slate-300">
-            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 uppercase mb-1.5">Affrina A</h1>
-            <p class="text-sm sm:text-base font-semibold text-slate-700 mb-2.5">Aspiring Data Scientist · Innovation Engineer Trainee</p>
-            
-            <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-1 text-xs text-slate-600 font-medium">
-                <span>📍 Coimbatore, Tamil Nadu, India</span>
-                <span>•</span>
-                <a href="mailto:affrina700@gmail.com" class="hover:text-orange-600">✉️ affrina700@gmail.com</a>
-                <span>•</span>
-                <a href="https://github.com/affrina700-eng" target="_blank" class="hover:text-orange-600">🔗 github.com/affrina700-eng</a>
-                <span>•</span>
-                <a href="https://affrina700-eng.github.io" target="_blank" class="hover:text-orange-600">🌐 affrina700-eng.github.io</a>
-            </div>
-        </header>
+    <!-- Header -->
+    <header class="header">
+      <h1 class="name-title">B.Sc. Data Science Student</h1>
+      <p class="sub-title">Second-Year Undergraduate | Theme: "My Journey Beyond the Classroom"</p>
+      <div class="contact-line">
+        <span>Focus: Data Analysis & Visualization</span>
+        <span>&bull;</span>
+        <span>1.5 Years in College</span>
+        <span>&bull;</span>
+        <span>Academic Project: AGMARKNET Analysis</span>
+      </div>
+    </header>
 
-        <!-- Section: Professional Summary -->
-        <section class="mt-5">
-            <h2 class="section-title text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-1 mb-2">
-                Professional Summary
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-800 leading-relaxed text-justify">
-                Analytical and motivated 2nd-year <strong>B.Sc. Data Science</strong> student at <strong>Kumaraguru Institutions</strong> and <strong>Innovation Engineer Trainee</strong> in the <strong>PRICE ProtoSem</strong> programme. Combines technical grounding in <strong>Python, SQL, Power BI, and Machine Learning</strong> with industry-integrated problem-solving across AI, intelligent commerce, and IoT prototyping. Proven capability in statistical exploratory analysis, data modeling, and developing data-backed solutions for real-world challenge statements.
-            </p>
-        </section>
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        I am a B.Sc. Data Science student with a growing interest in data analysis and data visualization. Beyond my regular academic curriculum, I have participated in departmental events, conducted a Data Hunt activity, attended a one-week Power BI workshop, completed certifications and explored interdisciplinary learning through a Finance Liberal Arts course. I am currently building projects and continuing to develop my skills through practical experiences.
+      </p>
+    </section>
 
-        <!-- Section: Professional Innovation Experience -->
-        <section class="mt-5">
-            <h2 class="section-title text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-1 mb-2">
-                Innovation & Professional Experience
-            </h2>
-            <div class="space-y-3">
-                <div>
-                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
-                        <div>
-                            <strong class="text-xs sm:text-sm font-bold text-slate-900">Innovation Engineer Trainee</strong>
-                            <span class="text-xs font-semibold text-slate-700"> | PRICE ProtoSem</span>
-                        </div>
-                        <span class="text-xs font-medium text-slate-600 sm:text-right">20-Week Industry Programme</span>
-                    </div>
-                    <ul class="list-disc list-outside ml-5 text-xs text-slate-800 space-y-1">
-                        <li>Selected for an intensive 20-week industry-integrated innovation programme focused on solving real-world retail and commerce challenges through AI, analytics, intelligent systems, IoT, prototyping, and entrepreneurship.</li>
-                        <li>Collaborating on industry problem statements to architect, test, and validate practical technology prototypes beyond conventional classroom coursework.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Bachelor of Science in Data Science (B.Sc. Data Science)</span>
+          <span class="entry-date">Current &bull; 2nd Year (1.5 Years Completed)</span>
+        </div>
+        <div class="entry-sub">Active Extracurricular & Practical Focus</div>
+        <p class="entry-desc">
+          Actively complementing undergraduate study with departmental leadership, certified courses, practical workshops, and public government dataset analysis.
+        </p>
+      </div>
+    </section>
 
-        <!-- Section: Education -->
-        <section class="mt-5">
-            <h2 class="section-title text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-1 mb-2">
-                Education
-            </h2>
-            <div class="space-y-1.5">
-                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between">
-                    <div>
-                        <strong class="text-xs sm:text-sm font-bold text-slate-900">Bachelor of Science (B.Sc.) in Data Science</strong>
-                        <div class="text-xs font-semibold text-slate-700">Kumaraguru Institutions, Coimbatore</div>
-                    </div>
-                    <div class="text-xs font-medium text-slate-600 sm:text-right mt-0.5 sm:mt-0">
-                        2024 – 2027 (Currently in 2nd Year)
-                    </div>
-                </div>
-                <p class="text-xs text-slate-700">
-                    <strong>Core Coursework:</strong> Applied Statistics & Probability, Relational Database Management Systems (RDBMS), Machine Learning Foundations, Data Structures, Exploratory Data Analysis, Data Visualization.
-                </p>
-            </div>
-        </section>
+    <!-- Departmental Leadership & Activities -->
+    <section class="section">
+      <h2 class="section-title">Departmental Leadership & Real Experiences</h2>
 
-        <!-- Section: Technical Skills -->
-        <section class="mt-5">
-            <h2 class="section-title text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-1 mb-2">
-                Technical Skills & Disciplines
-            </h2>
-            <div class="grid grid-cols-1 gap-1.5 text-xs sm:text-sm text-slate-800">
-                <div>
-                    <strong class="font-bold text-slate-900">Programming & Scripting:</strong> Python (Pandas, NumPy, Scikit-Learn, Matplotlib, Seaborn), SQL
-                </div>
-                <div>
-                    <strong class="font-bold text-slate-900">Analytics & BI:</strong> Power BI (Interactive Dashboards, KPI Reporting), Exploratory Data Analysis (EDA), Data Storytelling
-                </div>
-                <div>
-                    <strong class="font-bold text-slate-900">Machine Learning:</strong> Supervised Learning, Regression Models, Classification Pipelines, Feature Engineering
-                </div>
-                <div>
-                    <strong class="font-bold text-slate-900">Innovation Focus Areas:</strong> Phygital Retail & Intelligent Commerce, Intelligent Systems & IoT, Rapid Prototyping
-                </div>
-            </div>
-        </section>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Conducted "Data Hunt" Activity</span>
+          <span class="entry-date">Departmental Activity</span>
+        </div>
+        <div class="entry-sub">Lead Organizer & Coordinator</div>
+        <ul class="bullet-list">
+          <li><strong>Event Coordination & Organization:</strong> Planned rules, checkpoint structures, and logistical participant flow for the departmental activity.</li>
+          <li><strong>Teamwork & Communication:</strong> Led a peer coordination team and facilitated clear real-time instructions for participants.</li>
+          <li><strong>Responsibility:</strong> Took full ownership of event execution, schedule management, and participant engagement.</li>
+        </ul>
+      </div>
 
-        <!-- Section: Academic & Practical Projects -->
-        <section class="mt-5">
-            <h2 class="section-title text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-1 mb-2">
-                Academic & Practical Project Work
-            </h2>
-            <div class="space-y-3">
-                
-                <!-- Project 1 -->
-                <div>
-                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-0.5">
-                        <strong class="text-xs sm:text-sm font-bold text-slate-900">Interactive Business Intelligence & Performance Dashboard</strong>
-                        <span class="text-xs font-medium text-slate-600">Power BI | Data Modeling</span>
-                    </div>
-                    <ul class="list-disc list-outside ml-5 text-xs text-slate-800 space-y-0.5">
-                        <li>Developed a multi-page interactive dashboard in Power BI to analyze multi-metric datasets with customized drill-throughs and trend visualizations.</li>
-                        <li>Modeled dataset relationships and configured key performance indicator (KPI) cards to enable intuitive decision-making.</li>
-                    </ul>
-                </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">DATAGENICS</span>
+          <span class="entry-date">Departmental Event</span>
+        </div>
+        <div class="entry-sub">Participant</div>
+        <p class="entry-desc">
+          Participated in the Datagenics event and gained exposure to the Data Science community and departmental activities.
+        </p>
+      </div>
 
-                <!-- Project 2 -->
-                <div>
-                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-0.5">
-                        <strong class="text-xs sm:text-sm font-bold text-slate-900">Predictive Modeling & Statistical Exploratory Data Analysis (EDA)</strong>
-                        <span class="text-xs font-medium text-slate-600">Python | Scikit-Learn | Pandas</span>
-                    </div>
-                    <ul class="list-disc list-outside ml-5 text-xs text-slate-800 space-y-0.5">
-                        <li>Conducted exploratory data analysis identifying distributions and correlations using Matplotlib and Seaborn.</li>
-                        <li>Implemented preprocessing pipelines and trained supervised machine learning classifiers evaluated by precision and recall.</li>
-                    </ul>
-                </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">DATA CONCLAVE</span>
+          <span class="entry-date">Departmental Event</span>
+        </div>
+        <div class="entry-sub">Participant & Contributor</div>
+        <p class="entry-desc">
+          Participated and contributed to activities related to Data Conclave, engaging with broader technical discussions and academic forums.
+        </p>
+      </div>
+    </section>
 
-                <!-- Project 3 -->
-                <div>
-                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-0.5">
-                        <strong class="text-xs sm:text-sm font-bold text-slate-900">Relational Database Design & Analytical Query Optimization</strong>
-                        <span class="text-xs font-medium text-slate-600">SQL | DBMS</span>
-                    </div>
-                    <ul class="list-disc list-outside ml-5 text-xs text-slate-800 space-y-0.5">
-                        <li>Formulated normalized database schemas and authored multi-table JOINs and window functions to generate analytical reports.</li>
-                    </ul>
-                </div>
+    <!-- Workshops & Certifications -->
+    <section class="section">
+      <h2 class="section-title">Workshops & Certifications</h2>
 
-            </div>
-        </section>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Power BI & Data Visualization Workshop</span>
+          <span class="entry-date">1-Week Intensive Workshop</span>
+        </div>
+        <div class="entry-sub">Major Practical Learning Experience</div>
+        <p class="entry-desc">
+          Attended a one-week workshop focused on Power BI and data visualization, building interactive dashboards and visual reporting metrics.
+        </p>
+      </div>
 
-        <!-- Section: Core Strengths & Soft Skills -->
-        <section class="mt-5">
-            <h2 class="section-title text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-900 border-b border-slate-800 pb-1 mb-2">
-                Core Strengths & Competencies
-            </h2>
-            <div class="text-xs sm:text-sm text-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                <div>• Analytical Thinking & Problem Structuring</div>
-                <div>• Visual Data Storytelling & Presentation</div>
-                <div>• Cross-Functional Collaborative Teamwork</div>
-                <div>• Rapid Prototyping & Technology Exploration</div>
-            </div>
-        </section>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Microsoft Excel Certification</span>
+          <span class="entry-date">Simplilearn Certified</span>
+        </div>
+        <div class="entry-sub">Online Course</div>
+        <p class="entry-desc">
+          Completed an online Microsoft Excel course through Simplilearn and received a verified certificate covering formulas, lookup mechanics, and data tables.
+        </p>
+      </div>
 
-    </main>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Finance Liberal Arts Course</span>
+          <span class="entry-date">1-Week Interdisciplinary Course</span>
+        </div>
+        <div class="entry-sub">Liberal Arts Immersion</div>
+        <p class="entry-desc">
+          Completed a one-week Liberal Arts course focused on Finance, gaining cross-disciplinary quantitative perspective.
+        </p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Outbound Programme</span>
+          <span class="entry-date">Certificate Earned</span>
+        </div>
+        <div class="entry-sub">Experiential Team Building</div>
+        <p class="entry-desc">
+          Participated in an outbound programme and received a certificate, developing collaborative resilience and team problem-solving.
+        </p>
+      </div>
+    </section>
+
+    <!-- Featured Academic Project -->
+    <section class="section">
+      <h2 class="section-title">Featured Academic Project</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Agricultural Commodity Price Analysis and Forecasting</span>
+          <span class="entry-date">Academic Data Science Project</span>
+        </div>
+        <div class="entry-sub">Public AGMARKNET Government Data</div>
+        <p class="entry-desc" style="margin-bottom: 0.5rem;">
+          An academic Data Science project focused on analysing agricultural commodity market data, identifying patterns, comparing prices and exploring forecasting techniques.
+        </p>
+        <ul class="bullet-list">
+          <li><strong>Workflow:</strong> Government Data ➔ Data Collection ➔ Data Cleaning ➔ Data Analysis ➔ Visualization ➔ Pattern Identification ➔ Forecasting.</li>
+          <li>Identified historical seasonal cycles and price spread across Indian mandis for key agricultural commodities.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Current Learning Journey -->
+    <section class="section">
+      <h2 class="section-title">Current Journey ("Still Building My Story")</h2>
+      <ul class="bullet-list">
+        <li><strong>Exploring ProtoSem:</strong> Engaging with the ProtoSem innovation framework as part of my ongoing learning and professional journey.</li>
+        <li><strong>Building Personal Projects:</strong> Applying data science fundamentals to real-world datasets.</li>
+        <li><strong>Developing Personal Portfolio:</strong> Crafting interactive storytelling of my growth beyond the classroom.</li>
+        <li><strong>Exploring GitHub:</strong> Version control, collaborative repositories, and technical documentation.</li>
+        <li><strong>Deepening Analysis & Visualization:</strong> Expanding exploratory data analysis (EDA) techniques and chart design.</li>
+      </ul>
+    </section>
+
+    <!-- Skills Summary -->
+    <section class="section">
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill-block">
+          <h4>Technical Tools</h4>
+          <div class="skill-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">Microsoft Excel</span>
+            <span class="tag">GitHub</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h4>Data Skills</h4>
+          <div class="skill-tags">
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Exploratory Data Analysis</span>
+            <span class="tag">Forecasting Fundamentals</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h4>Professional Skills</h4>
+          <div class="skill-tags">
+            <span class="tag">Communication</span>
+            <span class="tag">Presentation</span>
+            <span class="tag">Event Coordination</span>
+            <span class="tag">Teamwork</span>
+            <span class="tag">Problem Solving</span>
+            <span class="tag">Analytical Thinking</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
 </body>
 </html>
